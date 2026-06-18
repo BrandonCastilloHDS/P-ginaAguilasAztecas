@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
 export default function Navbar() {
-    // Estado para controlar si el menú de celular está abierto o cerrado
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <nav className="sticky top-0 z-50 shadow-lg bg-[#00519e] text-white">
             <div className="flex justify-between items-center px-4 md:px-6 py-4">
 
-                {/* Sección Izquierda: Logo y Título */}
                 <div className="flex items-center">
                     <a href="https://www.f-airmexico.com.mx/" target="_blank" rel="noopener noreferrer">
                         <img
@@ -23,7 +21,6 @@ export default function Navbar() {
                     </h1>
                 </div>
 
-                {/* Sección Derecha: Menú de Escritorio (Oculto en celular) */}
                 <div className="hidden md:flex gap-6 font-medium text-lg">
                     <a href="#" className="relative group transition-colors duration-300 hover:text-blue-200">
                         Sobre Nosotros
@@ -39,12 +36,10 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                {/* Botón de Menú Hamburguesa (Visible solo en celular) */}
                 <button
                     className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
-                    {/* Líneas del menú animadas */}
                     <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
                     <span className={`block w-6 h-0.5 bg-white transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
                     <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
