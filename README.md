@@ -241,6 +241,7 @@ Ver el estado del repositorio:
 git status
 ```
 
+
 Ver la rama actual:
 
 ```bash
