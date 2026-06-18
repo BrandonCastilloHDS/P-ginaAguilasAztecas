@@ -1,16 +1,125 @@
-# React + Vite
+# Águilas Aztecas — Sitio Web Oficial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web de la Escuadrilla Acrobática **Águilas Aztecas** de la Fuerza Aérea Mexicana.  
+Desarrollado con **React + Vite + Tailwind CSS v4 + React Router**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Cómo correr el proyecto
 
-## React Compiler
+```bash
+# 1. Instalar dependencias (solo la primera vez)
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 2. Levantar servidor de desarrollo
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Luego abrir en el navegador: **http://localhost:5173/**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Generar versión final para producción
+npm run build
+
+# Previsualizar el build
+npm run preview
+```
+
+---
+
+## Estructura del proyecto
+
+```
+AguilasAztecas/
+│
+├── public/                        # Archivos estáticos (accesibles desde el navegador)
+│   ├── img/
+│   │   ├── aviones/               # Fotos y video de los aviones
+│   │   │   └── 01 Texans (1).mp4  # Video de fondo del Hero
+│   │   ├── galeria/               # Fotos adicionales para la galería
+│   │   ├── pilotos/               # Fotos de los pilotos
+│   │   └── logos/                 # Logos institucionales (FAMEX, etc.)
+│   └── videos/                    # Videos adicionales
+│
+├── src/
+│   ├── pages/                     # Una página por sección del sitio
+│   │   ├── Home.jsx               # Página principal (/)
+│   │   ├── HistoriaPage.jsx       # Página Historia (/historia)
+│   │   ├── MisionPage.jsx         # Página Misión (/mision)
+│   │   ├── ParticipacionesPage.jsx# Página Participaciones (/participaciones)
+│   │   ├── GaleriaPage.jsx        # Página Galería (/galeria)
+│   │   └── ContactoPage.jsx       # Página Contacto (/contacto)
+│   │
+│   ├── components/                # Componentes reutilizables
+│   │   ├── Navbar.jsx             # Barra de navegación (aparece en todas las páginas)
+│   │   ├── Hero.jsx               # Sección principal con video de fondo y título
+│   │   ├── StatsBar.jsx           # Barra dorada con cifras clave (1915, 2017, etc.)
+│   │   ├── Historia.jsx           # Sección de historia con timeline
+│   │   ├── MisionVision.jsx       # Cards de Misión, Visión y Objetivo
+│   │   ├── Participaciones.jsx    # Timeline de espectáculos aéreos
+│   │   ├── Heraldica.jsx          # Descripción de la rodela heráldica
+│   │   ├── Galeria.jsx            # Grid de fotos y videos
+│   │   └── Footer.jsx             # Pie de página
+│   │
+│   ├── App.jsx                    # Router principal — define las rutas del sitio
+│   ├── main.jsx                   # Punto de entrada de React
+│   └── index.css                  # Estilos globales (Tailwind + scroll suave)
+│
+├── index.html                     # HTML base (aquí se cargan las fuentes de Google)
+├── package.json                   # Dependencias del proyecto
+└── vite.config.js                 # Configuración de Vite
+```
+
+---
+
+## Paleta de colores
+
+| Color | Hex | Uso |
+|---|---|---|
+| Navy oscuro | `#00296b` | Fondo principal, navbar, footer |
+| Navy medio | `#003f87` | Sección Historia, cards |
+| Azul medio | `#00519e` | Sección Heráldica, acentos |
+| Azul cielo | `#0093d1` | Detalles, textos secundarios |
+| Dorado | `#fdc400` | Acento principal, bordes, botones CTA |
+| Dorado claro | `#ffe84f` | Hover, acentos secundarios |
+
+---
+
+## Rutas del sitio
+
+| URL | Página | Archivo |
+|---|---|---|
+| `/` | Inicio | `pages/Home.jsx` |
+| `/historia` | Historia | `pages/HistoriaPage.jsx` |
+| `/mision` | Misión | `pages/MisionPage.jsx` |
+| `/participaciones` | Participaciones | `pages/ParticipacionesPage.jsx` |
+| `/galeria` | Galería | `pages/GaleriaPage.jsx` |
+| `/contacto` | Contacto | `pages/ContactoPage.jsx` |
+
+---
+
+## Agregar contenido
+
+### Fotos nuevas a la galería
+1. Copiar la imagen a `public/img/galeria/`
+2. Abrir `src/components/Galeria.jsx`
+3. Agregar un objeto al arreglo `fotos`:
+```js
+{ src: '/img/galeria/mi-foto.jpg', alt: 'Descripción de la foto' }
+```
+
+### Fotos de pilotos
+Colocar en `public/img/pilotos/`
+
+### Videos
+Colocar en `public/videos/`
+
+---
+
+## Tecnologías
+
+- [React 19](https://react.dev/)
+- [Vite 8](https://vite.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [React Router v7](https://reactrouter.com/)
+- Fuentes: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed) + [Rajdhani](https://fonts.google.com/specimen/Rajdhani)
