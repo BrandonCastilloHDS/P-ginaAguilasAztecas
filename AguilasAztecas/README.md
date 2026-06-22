@@ -1,8 +1,6 @@
-# Águilas Aztecas — Sitio Web Oficial
+# Águilas Aztecas 
 
-Sitio web de la Escuadrilla Acrobática **Águilas Aztecas** de la Fuerza Aérea Mexicana.  
-Desarrollado con **React + Vite + Tailwind CSS v4 + React Router**.
-
++
 ---
 
 ## Cómo correr el proyecto
@@ -95,24 +93,6 @@ AguilasAztecas/
 | `/participaciones` | Participaciones | `pages/ParticipacionesPage.jsx` |
 | `/galeria` | Galería | `pages/GaleriaPage.jsx` |
 | `/contacto` | Contacto | `pages/ContactoPage.jsx` |
-
----
-
-## Agregar contenido
-
-### Fotos nuevas a la galería
-1. Copiar la imagen a `public/img/galeria/`
-2. Abrir `src/components/Galeria.jsx`
-3. Agregar un objeto al arreglo `fotos`:
-```js
-{ src: '/img/galeria/mi-foto.jpg', alt: 'Descripción de la foto' }
-```
-
-### Fotos de pilotos
-Colocar en `public/img/pilotos/`
-
-### Videos
-Colocar en `public/videos/`
 
 ---
 
