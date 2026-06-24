@@ -1,12 +1,15 @@
 import Galeria from '../components/Galeria';
 
 
+
 function GaleriaPage() {
 
   return (
     <>
      <div />
-      <Galeria/>
+        
+        <Galeria/>
+       
     </>
   );
 }

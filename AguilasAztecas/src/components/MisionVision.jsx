@@ -88,7 +88,7 @@ function MisionVision() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {principios.map((p, i) => (
               <div key={i} className="flex items-start gap-3">
-                <div className="mt-1.5 w-2 h-2 bg-[#fdc400] flex-shrink-0" />
+                <div className="mt-1.5 w-2 h-2 bg-[#fdc400] shrink-0" />
                 <p className="text-gray-700 text-sm font-medium leading-snug">{p}</p>
               </div>
             ))}
