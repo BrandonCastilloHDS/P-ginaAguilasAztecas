@@ -1,17 +1,20 @@
-const fotos = [
-  { src: '/img/aviones/avion.jpeg',                  alt: 'Texan II T-6C+ Águilas Aztecas' },
-  { src: '/img/aviones/IMG-20260603-WA0042.jpg.jpeg', alt: 'Maniobra acrobática' },
-  { src: '/img/aviones/IMG-20260603-WA0043.jpg.jpeg', alt: 'Formación acrobática' },
-  { src: '/img/aviones/IMG-20260603-WA0044.jpg.jpeg', alt: 'Espectáculo aéreo' },
-  { src: '/img/aviones/IMG-20260603-WA0045.jpg.jpeg', alt: 'Vuelo acrobático' },
-];
+import React from 'react';
+
+// Genera automáticamente el arreglo de 10 fotos (aviones_1 hasta aviones_10)
+const fotos = Array.from({ length: 13 }, (_, i) => {
+  const numero = i + 1;
+  return {
+    src: `/img/aviones/avion_${numero}.webp`, 
+    alt: `Águilas Aztecas - Fotografía ${numero}`
+  };
+});
 
 function VideoPlaceholder({ label }) {
   return (
     <div className="relative aspect-video bg-[#003f87] border border-[#0093d1]/20 flex flex-col items-center justify-center gap-3 group hover:border-[#fdc400]/40 transition-colors cursor-pointer">
       {/* Play icon */}
       <div className="w-14 h-14 border-2 border-white/30 rounded-full flex items-center justify-center group-hover:border-[#fdc400]/60 transition-colors">
-        <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white/50 border-b-[8px] border-b-transparent ml-1 group-hover:border-l-[#fdc400] transition-colors" />
+        <div className="w-0 h-0 border-t-8 border-t-transparent border-l-14 border-l-white/50 border-b-8 border-b-transparent ml-1 group-hover:border-l-[#fdc400] transition-colors" />
       </div>
       <p className="text-white/40 text-xs font-semibold uppercase tracking-widest group-hover:text-white/60 transition-colors">
         {label}
@@ -82,25 +85,8 @@ function Galeria() {
             <VideoPlaceholder label="Próximamente" />
             <VideoPlaceholder label="Próximamente" />
           </div>
-
-          <p className="text-center text-gray-400 text-xs mt-5 tracking-wide">
-            Agrega videos en <code className="bg-gray-200 px-1.5 py-0.5 rounded text-gray-600">public/videos/</code> para que aparezcan aquí
-          </p>
         </div>
 
-        {/* Upload note */}
-        <div className="mt-10 bg-white border border-[#0093d1]/20 p-5 flex items-start gap-4">
-          <div className="w-2 h-2 mt-1.5 bg-[#fdc400] flex-shrink-0" />
-          <p className="text-gray-500 text-xs leading-relaxed">
-            Para agregar más imágenes, colócalas en{' '}
-            <code className="bg-gray-100 px-1 py-0.5 text-gray-700">public/img/galeria/</code>{' '}
-            o en{' '}
-            <code className="bg-gray-100 px-1 py-0.5 text-gray-700">public/img/aviones/</code>{' '}
-            y actualiza el arreglo <code className="bg-gray-100 px-1 py-0.5 text-gray-700">fotos</code> en este componente.
-            Para fotos de pilotos, usa{' '}
-            <code className="bg-gray-100 px-1 py-0.5 text-gray-700">public/img/pilotos/</code>.
-          </p>
-        </div>
       </div>
     </section>
   );
