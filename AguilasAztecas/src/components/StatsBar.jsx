@@ -1,9 +1,4 @@
-const stats = [
-  { number: '1915', label: 'Fundación F.A.M' },
-  { number: '2017', label: 'Origen Esc. 402' },
-  { number: '15+',  label: 'Espectáculos Aéreos' },
-  { number: '1.er', label: 'Certificado F.A.A' },
-];
+const stats = [];
 
 function StatsBar() {
   return (

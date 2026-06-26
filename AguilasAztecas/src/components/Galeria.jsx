@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Genera automáticamente el arreglo de 10 fotos (aviones_1 hasta aviones_10)
 const fotos = Array.from({ length: 13 }, (_, i) => {
   const numero = i + 1;

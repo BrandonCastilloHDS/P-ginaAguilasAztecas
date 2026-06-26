@@ -1,11 +1,11 @@
 import Hero     from '../components/Hero';
-import StatsBar from '../components/StatsBar';
+import RecentEventVideos from '../components/RecentEventVideos';
 
 function Home() {
   return (
     <>
       <Hero />
-      <StatsBar />
+      <RecentEventVideos />
     </>
   );
 }
