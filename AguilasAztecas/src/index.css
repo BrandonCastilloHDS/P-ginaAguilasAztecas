@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rajdhani', system-ui, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Barlow Condensed', 'Rajdhani', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #00296b;
+}
+::-webkit-scrollbar-thumb {
+  background: #fdc400;
+  border-radius: 0;
+}
+
+/* Section offset for sticky nav */
+[id] {
+  scroll-margin-top: 52px;
+}
