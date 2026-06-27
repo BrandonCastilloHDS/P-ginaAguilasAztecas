@@ -1,5 +1,6 @@
+import Participaciones from "../components/Participaciones";
 function ParticipacionesPage() {
-  return <div />;
+  return <Participaciones />;
 }
 
 export default ParticipacionesPage;

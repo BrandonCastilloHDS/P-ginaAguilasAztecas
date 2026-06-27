@@ -1,5 +1,7 @@
+import MisionVision from "../components/MisionVision";
+
 function MisionPage() {
-  return <div />;
+  return <MisionVision />;
 }
 
 export default MisionPage;
