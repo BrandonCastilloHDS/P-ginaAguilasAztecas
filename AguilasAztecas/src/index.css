@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: 'Rajdhani', system-ui, sans-serif;
-  background-color: #ffffff;
+  background-color: #f4f0e8;
   overflow-x: hidden;
 }
 
@@ -16,14 +16,23 @@ h1, h2, h3, h4 {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #00296b;
+  background: #0b1728;
 }
 ::-webkit-scrollbar-thumb {
-  background: #fdc400;
-  border-radius: 0;
+  background: linear-gradient(180deg, #006847, #f4f0e8, #ce1126);
+  border: 2px solid #0b1728;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0b7a54, #d4af37, #b80f22);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b88a2a #0b1728;
 }
 
 /* Section offset for sticky nav */

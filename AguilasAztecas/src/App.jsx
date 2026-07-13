@@ -27,7 +27,7 @@ function AppContent() {
     return (
       <AirplaneAnimation
         key={location.pathname}
-        className="fixed inset-0 overflow-hidden bg-[#00296b] pointer-events-none z-50"
+        className="fixed inset-0 overflow-hidden bg-[#0b1728] pointer-events-none z-50"
         onComplete={() => setHiddenAirplanePath(location.pathname)}
       />
     );

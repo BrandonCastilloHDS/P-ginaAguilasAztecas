@@ -67,14 +67,14 @@ const eventos = [
 
 function Participaciones() {
   return (
-    <section id="participaciones" className="bg-[#00296b] py-24 relative overflow-hidden">
+    <section id="participaciones" className="bg-[#0b1728] py-24 relative overflow-hidden">
 
       {/* Decorative background texture */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(45deg, #fdc400 25%, transparent 25%), linear-gradient(-45deg, #fdc400 25%, transparent 25%)',
+            'linear-gradient(45deg, #d4af37 25%, transparent 25%), linear-gradient(-45deg, #d4af37 25%, transparent 25%)',
           backgroundSize: '8px 8px',
         }}
       />
@@ -83,19 +83,19 @@ function Participaciones() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#0093d1] text-[10px] font-bold tracking-[0.5em] uppercase mb-3">
+          <p className="text-[#d4af37] text-[10px] font-bold tracking-[0.5em] uppercase mb-3">
             Trayectoria
           </p>
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wide">
+          <h2 className="text-5xl md:text-6xl font-black text-[#f4f0e8] mb-4 tracking-wide">
             PARTICIPACIONES
           </h2>
-          <div className="w-20 h-1 bg-[#fdc400] mx-auto" />
+          <div className="w-50 h-1 bg-gradient-to-r from-[#006847] via-[#E7E7E7] to-[#ce1126] mx-auto" />
         </div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Central vertical line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#0093d1]/20 -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#b88a2a]/20 -translate-x-1/2" />
 
           <div className="space-y-10">
             {eventos.map((grupo, gi) => (
@@ -103,7 +103,7 @@ function Participaciones() {
 
                 {/* Year marker */}
                 <div className={`flex ${gi % 2 === 0 ? 'md:justify-end' : 'md:col-start-2 md:justify-start'} md:col-span-2 justify-start mb-3 md:mb-0 relative`}>
-                  <div className="md:absolute md:left-1/2 md:-translate-x-1/2 bg-[#fdc400] text-[#00296b] px-5 py-1.5 font-black text-sm tracking-[0.15em]">
+                  <div className="md:absolute md:left-1/2 md:-translate-x-1/2 bg-[#b88a2a] text-[#0b1728] px-5 py-1.5 font-black text-sm tracking-[0.15em]">
                     {grupo.year}
                   </div>
                 </div>
@@ -115,18 +115,18 @@ function Participaciones() {
                       key={ei}
                       className={`${
                         gi % 2 === 0 ? 'md:col-start-1' : 'md:col-start-2'
-                      } flex items-start gap-3 bg-[#003f87]/50 border border-[#0093d1]/15 px-5 py-4 hover:border-[#fdc400]/30 transition-colors`}
+                      } flex items-start gap-3 bg-white/[0.055] border border-[#f4f0e8]/10 px-5 py-4 hover:border-[#b88a2a]/45 transition-colors`}
                     >
-                      <div className={`mt-1.5 w-2 h-2 flex-shrink-0 ${ev.especial ? 'bg-[#fdc400]' : 'bg-[#0093d1]'}`} />
+                      <div className={`mt-1.5 w-2 h-2 flex-shrink-0 ${ev.especial ? 'bg-[#d4af37]' : 'bg-[#006847]'}`} />
                       <div>
-                        <p className="text-[#0093d1] text-[9px] font-bold tracking-[0.25em] uppercase mb-0.5">
+                        <p className="text-[#d4af37] text-[9px] font-bold tracking-[0.25em] uppercase mb-0.5">
                           {ev.fecha}
                         </p>
-                        <p className={`text-sm font-semibold leading-snug ${ev.especial ? 'text-white' : 'text-white/75'}`}>
+                        <p className={`text-sm font-semibold leading-snug ${ev.especial ? 'text-white' : 'text-[#f4f0e8]/72'}`}>
                           {ev.nombre}
                         </p>
                         {ev.badge && (
-                          <span className="inline-block mt-1.5 bg-[#fdc400] text-[#00296b] text-[8px] font-black uppercase tracking-widest px-2 py-0.5">
+                          <span className="inline-block mt-1.5 bg-[#d4af37] text-[#0b1728] text-[8px] font-black uppercase tracking-widest px-2 py-0.5">
                             {ev.badge}
                           </span>
                         )}
