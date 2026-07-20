@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
+import "../styles.css";
+
 
 function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f3f0e8]">
 
+
+    
       {/* Background video with overlay */}
       <div className="absolute inset-0">
+        
         <video
           autoPlay
           muted
@@ -16,90 +21,104 @@ function Hero() {
         >
           <source src="/img/aviones/01 Texans (1).mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00296b]/80 via-[#00296b]/55 to-[#00296b]" />
+        
+        
+        <div className="absolute inset-0 bg-gradient-to-b from-blue/15 via-blue/45 to-[#d8d0bf]/10" />
+        
       </div>
+      
+      
 
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            'linear-gradient(#0093d1 1px, transparent 1px), linear-gradient(90deg, #0093d1 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-        }}
-      />
+      
 
       {/* Decorative diagonal accent lines */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/3 -left-10 w-64 h-px bg-gradient-to-r from-transparent via-[#fdc400]/25 to-transparent rotate-[14deg]" />
-        <div className="absolute top-[38%] -left-6  w-44 h-px bg-gradient-to-r from-transparent via-[#0093d1]/20 to-transparent rotate-[14deg]" />
-        <div className="absolute bottom-1/3 -right-10 w-64 h-px bg-gradient-to-l from-transparent via-[#fdc400]/25 to-transparent -rotate-[14deg]" />
-        <div className="absolute bottom-[38%] -right-6  w-44 h-px bg-gradient-to-l from-transparent via-[#0093d1]/20 to-transparent -rotate-[14deg]" />
-      </div>
-
+        <div className="absolute -top-38 -left-34 h-[52rem] w-22 rotate-[34deg] bg-[#125e58]/55 border-r border-[#c8a24a]/45" />
+        <div className="absolute -top-15 -left-24 h-[52rem] w-12 rotate-[34deg] bg-[#ffffff]/100 border-r border-[#c8a24a]/45" />
+        <div className="absolute -top-13 -left-12 h-[52rem] w-12 rotate-[34deg] bg-[#c0203c]/55 border-r border-[#c8a24a]/45" />
+        <div className="absolute -top-20 left-8 h-[48rem] w-3 rotate-[34deg] bg-[#d4af37]/70" />
+        
+      <div className="absolute bottom-0 right-0 scale-x-[-1] scale-y-[-1]">
+    <div className="absolute -top-58 -left-34 h-[52rem] w-22 rotate-[34deg] bg-[#c0203c]/85 border-r border-[#c8a24a]/45" />
+    <div className="absolute -top-24 -left-32 h-[52rem] w-13 rotate-[34deg] bg-[#ffffff]/85 border-r border-[#c8a24a]/45" />
+    <div className="absolute -top-19 -left-6 h-[42rem] w-14 rotate-[34deg] bg-[#125e58]/85 border-r border-[#c8a24a]/45" />
+    <div className="absolute -top-18 left-1 h-[48rem] w-3 rotate-[34deg] bg-[#d4af37]/70" />
+     </div>
+    </div>
+    
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24">
 
         {/* Top badge */}
-        <div className="inline-flex items-center gap-3 mb-7">
-          <div className="w-10 h-px bg-[#0093d1]/70" />
-          <span className="text-[#0093d1] text-[10px] font-bold tracking-[0.45em] uppercase">
-            Fuerza Aérea Mexicana &nbsp;·&nbsp; Escuadrón Aéreo 402
+        <div className="inline-flex flex-wrap items-center justify-center gap-4 mb-6">
+          
+          
+          <span className="hidden sm:block h-px w-14 bg-[#b88a2a]" />
+          <span className="text-[#102033] text-[13px] font-black tracking-[0.34em] uppercase">
+            Fuerza Aérea Mexicana
           </span>
-          <div className="w-10 h-px bg-[#0093d1]/70" />
+          <span className="text-[#b88a2a] text-sm font-black">✦</span>
+          <span className="text-[#102033] text-[13px] font-black tracking-[0.34em] uppercase">
+            Escuadrón Aéreo 402
+          </span>
+          <span className="hidden sm:block h-px w-14 bg-[#b88a2a]" />
+          
         </div>
 
         {/* Main title */}
-        <div className="mb-3">
-          <h2 className="text-7xl md:text-9xl font-black text-white tracking-tight leading-none">
-            ÁGUILAS
-          </h2>
-          <h2 className="text-7xl md:text-9xl font-black text-[#fdc400] tracking-tight leading-none -mt-2">
-            AZTECAS
-          </h2>
-        </div>
+        
+
+
+
+    <div className="text-center">
+      <h1 className="hero-title-blue text-7xl sm:text-8xl md:text-[8.5rem] leading-[0.84]">
+        ÁGUILAS
+      </h1>
+
+      <h1 className="hero-title-gold text-7xl sm:text-8xl md:text-[8.5rem] leading-[0.86]">
+        AZTECAS
+      </h1>
+    </div>
 
         {/* Tagline */}
-        <div className="flex items-center justify-center gap-5 my-7">
-          <div className="w-14 h-px bg-[#fdc400]/50" />
-          <p className="text-white/65 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase">
+        <div className="flex flex-wrap items-center justify-center gap-5 my-7">
+          <div className="w-14 h-px bg-[#b88a2a]" /> {/* liniea valores  */}
+          <p className="text-[#102033] text-xs md:text-sm font-black tracking-[0.28em] uppercase">
             Excelencia &nbsp;·&nbsp; Precisión &nbsp;·&nbsp; Orgullo Nacional
           </p>
-          <div className="w-14 h-px bg-[#fdc400]/50" />
+          <div className="w-14 h-px bg-[#b88a2a]" /> {/* liniea valores  */}
         </div>
-
+      
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
             to="/historia"
-            className="bg-[#fdc400] text-[#00296b] px-11 py-4 text-xs font-black uppercase tracking-[0.22em] hover:bg-[#ffe84f] transition-colors duration-200 shadow-lg"
+            className="inline-flex min-w-48 items-center justify-center gap-3 bg-[#0d1c2e] text-white px-9 py-4 text-xs font-black uppercase tracking-[0.22em] border-2 border-[#b88a2a] hover:bg-[#132b49] transition-colors duration-200 shadow-lg shadow-black/20"
           >
+
+            <img
+                  src="/img/logos/aguila-dorada.png"
+                  alt="Águila"
+                  className="w-10 h-10 object-contain"
+                />
             Nuestra Historia
           </Link>
           <Link
             to="/galeria"
-            className="border-2 border-white/60 text-white px-11 py-4 text-xs font-black uppercase tracking-[0.22em] hover:border-[#fdc400] hover:text-[#fdc400] transition-colors duration-200"
+            className="inline-flex min-w-48 items-center justify-center border-2 border-[#b88a2a] bg-white/85 text-[#0d1c2e] px-9 py-4 text-xs font-black uppercase tracking-[0.22em] hover:bg-white/90 transition-colors duration-200"
           >
             Ver Galería
           </Link>
+        
         </div>
-      </div>
+      
 
-      {/* Bottom diagonal divider → gold stats bar */}
-      <div className="absolute bottom-0 left-0 right-0 leading-none">
-        <svg viewBox="0 0 1440 72" preserveAspectRatio="none" className="w-full h-14 md:h-[72px]">
-          <polygon points="0,72 0,52 1440,8 1440,72" style={{ fill: '#fdc400' }} />
-        </svg>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <div className="w-5 h-8 border-2 border-white/30 rounded-full flex items-start justify-center pt-1.5">
-          <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />
-        </div>
-      </div>
-    </section>
+    </div>
+    </section> 
+    
   );
+
+  
 }
 
 export default Hero;

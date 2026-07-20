@@ -1,0 +1,39 @@
+.hero-title-blue{
+    font-family:'Anton',sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #142a44,
+        #0c1b2e
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    -webkit-text-stroke:1px rgba(255,255,255,.55);
+
+    filter:
+        drop-shadow(0 2px 0 rgba(255,255,255,.45))
+        drop-shadow(0 7px 12px rgba(13,28,46,.22));
+}
+
+.hero-title-gold{
+
+    font-family:'Anton',sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #d8b24d,
+        #b88a2a,
+        #8d641c
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    -webkit-text-stroke:1px rgba(255,255,255,.35);
+
+    filter:
+        drop-shadow(0 2px 0 rgba(255,255,255,.35))
+        drop-shadow(0 7px 12px rgba(13,28,46,.22));
+}

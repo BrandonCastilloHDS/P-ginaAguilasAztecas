@@ -36,8 +36,8 @@ const heraldica = [
 function SectionLabel({ children }) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <div className="w-8 h-px bg-[#fdc400]" />
-      <p className="text-[#0093d1] text-[10px] font-black tracking-[0.45em] uppercase">{children}</p>
+      <div className="w-8 h-px bg-[#b88a2a]" />
+      <p className="text-[#006847] text-[10px] font-black tracking-[0.45em] uppercase">{children}</p>
     </div>
   );
 }
@@ -49,7 +49,7 @@ function SectionTitle({ children }) {
 }
 
 function Divider() {
-  return <div className="w-16 h-1 bg-[#fdc400]" />;
+  return <div className="w-16 h-1 bg-[#b88a2a]" />;
 }
 
 function HistoriaPage() {
@@ -57,18 +57,18 @@ function HistoriaPage() {
     <div className="pt-[52px]">
 
       {/* ── BANNER ── */}
-      <div className="relative bg-[#00296b] overflow-hidden">
+      <div className="relative bg-[#0b1728] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
             backgroundImage:
-              'linear-gradient(#0093d1 1px, transparent 1px), linear-gradient(90deg, #0093d1 1px, transparent 1px)',
+              'linear-gradient(#006847 1px, transparent 1px), linear-gradient(90deg, #006847 1px, transparent 1px)',
             backgroundSize: '56px 56px',
           }}
         />
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 40" preserveAspectRatio="none" className="w-full h-8">
-            <polygon points="0,40 1440,10 1440,40" style={{ fill: '#003f87' }} />
+            <polygon points="0,40 1440,10 1440,40" style={{ fill: '#132b49' }} />
           </svg>
         </div>
         <div className="max-w-7xl mx-auto px-6 py-16 pb-20 relative z-10">
@@ -90,31 +90,31 @@ function HistoriaPage() {
       </div>
 
       {/* ── HISTORIA NARRATIVA ── */}
-      <section className="bg-[#003f87] py-20">
+      <section className="bg-[#132b49] py-20">
         <div className="max-w-5xl mx-auto px-6 space-y-7">
           <p className="text-white/85 text-base leading-relaxed text-justify">
             La materialización de operaciones aéreas de la Escuadrilla Acrobática Águilas Aztecas (E.A.A.A.) implica desarrollar una sinergia entre diferentes equipos de trabajo dedicado al ramo aeronáutico, los cuales deben de coordinarse y complementarse de forma armoniosa y exacta, a fin de concluir con éxito sus actividades con los más altos estándares de seguridad.
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
-            La Fuerza Aérea Mexicana desde su constitución en <span className="text-[#fdc400] font-semibold">1915</span> a la fecha, es una institución que ha velado por la defensa de la soberanía y cielos mexicanos, apoyando al desarrollo del país a través de sus misiones fundamentales, asimismo realiza eventos cívicos como medida de acercamiento de las Fuerzas Armadas a la población, la Escuadrilla Acrobática de la Fuerza Aérea realiza espectáculos aéreos para incrementar la moral de la población e inspirar a las y los jóvenes de México, apegándose a los estándares de seguridad, directivas, reglamentación aeronáutica y profesionalismo.
+            La Fuerza Aérea Mexicana desde su constitución en <span className="text-[#b88a2a] font-semibold">1915</span> a la fecha, es una institución que ha velado por la defensa de la soberanía y cielos mexicanos, apoyando al desarrollo del país a través de sus misiones fundamentales, asimismo realiza eventos cívicos como medida de acercamiento de las Fuerzas Armadas a la población, la Escuadrilla Acrobática de la Fuerza Aérea realiza espectáculos aéreos para incrementar la moral de la población e inspirar a las y los jóvenes de México, apegándose a los estándares de seguridad, directivas, reglamentación aeronáutica y profesionalismo.
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
-            El 16 de febrero de <span className="text-[#fdc400] font-semibold">2010</span> se remitió una propuesta de la Fuerza Aérea Mexicana para la integración de un equipo acrobático con aviones <span className="text-white font-medium">Pilatus PC-7</span>, el cual tenía como propósito fortalecer la confianza que se detenta en las instituciones militares nacionales, así fue como el 02 de Julio del 2010 se autorizó la integración del 1/er. equipo acrobático del Colegio del Aire con pilotos aviadores de la Escuela Militar de Aviación, teniendo diversas participaciones a lo largo de su existencia hasta el año 2017.
+            El 16 de febrero de <span className="text-[#b88a2a] font-semibold">2010</span> se remitió una propuesta de la Fuerza Aérea Mexicana para la integración de un equipo acrobático con aviones <span className="text-white font-medium">Pilatus PC-7</span>, el cual tenía como propósito fortalecer la confianza que se detenta en las instituciones militares nacionales, así fue como el 02 de Julio del 2010 se autorizó la integración del 1/er. equipo acrobático del Colegio del Aire con pilotos aviadores de la Escuela Militar de Aviación, teniendo diversas participaciones a lo largo de su existencia hasta el año 2017.
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
-            En mayo del <span className="text-[#fdc400] font-semibold">2017</span> se ordenó la integración de 3 Escuadrillas Acrobáticas pertenecientes a los Edns. Ars. 201 (Cozumel, Q. Roo.), 204 (Hermosillo, Son.) y 402 (Cd. Ixtepec, Oax.) con el fin de participar en el "7/o Espectáculo Aéreo" y "Espectáculo Aéreo Jalisco" con la flota de aeronaves <span className="text-white font-medium">Texan II T-6C+</span> de reciente adquisición, fue entonces cuando nació el equipo acrobático del Escuadrón Aéreo 402, el cual en un futuro cambiaria de nominación al nombre emblemático de "Águilas Aztecas".
+            En mayo del <span className="text-[#b88a2a] font-semibold">2017</span> se ordenó la integración de 3 Escuadrillas Acrobáticas pertenecientes a los Edns. Ars. 201 (Cozumel, Q. Roo.), 204 (Hermosillo, Son.) y 402 (Cd. Ixtepec, Oax.) con el fin de participar en el "7/o Espectáculo Aéreo" y "Espectáculo Aéreo Jalisco" con la flota de aeronaves <span className="text-white font-medium">Texan II T-6C+</span> de reciente adquisición, fue entonces cuando nació el equipo acrobático del Escuadrón Aéreo 402, el cual en un futuro cambiaria de nominación al nombre emblemático de "Águilas Aztecas".
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
-            El <span className="text-[#fdc400] font-semibold">9 de marzo de 2024</span>, la Escuadrilla Acrobática del Escuadrón Aéreo 402 participó en el espectáculo Aéreo <span className="text-white font-medium">"Fiesta of Flight 2024"</span> en las instalaciones de la Base Aérea de Laughlin, ubicada en Del Rio, Texas, E.U.A., siendo la primera vez que la Fuerza Aérea Mexicana participa en un espectáculo aéreo fuera del territorio mexicano.
+            El <span className="text-[#b88a2a] font-semibold">9 de marzo de 2024</span>, la Escuadrilla Acrobática del Escuadrón Aéreo 402 participó en el espectáculo Aéreo <span className="text-white font-medium">"Fiesta of Flight 2024"</span> en las instalaciones de la Base Aérea de Laughlin, ubicada en Del Rio, Texas, E.U.A., siendo la primera vez que la Fuerza Aérea Mexicana participa en un espectáculo aéreo fuera del territorio mexicano.
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
             En septiembre de 2024, se aprobó el primer documento que establece el marco normativo de la Escuadrilla Águilas Aztecas; "La Directiva para la integración y operación de la Escuadrilla Acrobática de la Fuerza Aérea Mexicana" la cual tiene como propósito establecer los lineamientos para la integración, adiestramiento y operación de la misma, así mismo establece cual es el motivo por el cual se creó: <span className="text-white/70 italic">"…las Escuadrillas Acrobáticas emergen como un símbolo tradicional y emblemático de la destreza, profesionalismo y dedicación en el ámbito aeronáutico de los miembros de las Fuerzas Armadas a nivel internacional, por lo cual la Directiva no solo constituye una herramienta esencial para el desempeño eficaz y seguro de las maniobras aéreas durante los diversos eventos cívicos-militares, sino que también refleja el profundo compromiso de la DEFENSA con la excelencia, la seguridad y el servicio a la nación…"</span>.
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
-            La Escuadrilla Acrobática "Águilas Aztecas" tiene su origen en el Escuadrón Aéreo 402, en la plaza de Ciudad de Ixtepec, Oaxaca, pasó revista de entrada el <span className="text-[#fdc400] font-semibold">17 de enero del 2025</span> por el Secretario de la Defensa Nacional, el Gral. Ricardo Trevilla Trejo y el 10 de febrero del mismo año durante el marco del "110 aniversario de la Fuerza Aérea Mexicana" e inauguración del Grupo de Base Aérea No. 12 (Tulum, Q. Roo.), debutó con una serie de maniobras que demostraron la destreza y capacidad operativa de sus pilotos aviadores; sin embargo la consolidación de las "Águilas Aztecas" fue el resultado de un proyecto nacional que a través de los años se ha ido perfeccionando.
+            La Escuadrilla Acrobática "Águilas Aztecas" tiene su origen en el Escuadrón Aéreo 402, en la plaza de Ciudad de Ixtepec, Oaxaca, pasó revista de entrada el <span className="text-[#b88a2a] font-semibold">17 de enero del 2025</span> por el Secretario de la Defensa Nacional, el Gral. Ricardo Trevilla Trejo y el 10 de febrero del mismo año durante el marco del "110 aniversario de la Fuerza Aérea Mexicana" e inauguración del Grupo de Base Aérea No. 12 (Tulum, Q. Roo.), debutó con una serie de maniobras que demostraron la destreza y capacidad operativa de sus pilotos aviadores; sin embargo la consolidación de las "Águilas Aztecas" fue el resultado de un proyecto nacional que a través de los años se ha ido perfeccionando.
           </p>
           <p className="text-white/85 text-base leading-relaxed text-justify">
-            El <span className="text-[#fdc400] font-semibold">23 de abril de 2025</span>, las Águilas Aztecas obtuvieron su primer certificado de las maniobras acrobáticas expedido por la Administración Federal de Aviación (F.A.A. por sus siglas en inglés), el cual aprueba a las Águilas Aztecas la ejecución de maniobras acrobáticas durante la evolución de su tabla en los Estados Unidos de América.
+            El <span className="text-[#b88a2a] font-semibold">23 de abril de 2025</span>, las Águilas Aztecas obtuvieron su primer certificado de las maniobras acrobáticas expedido por la Administración Federal de Aviación (F.A.A. por sus siglas en inglés), el cual aprueba a las Águilas Aztecas la ejecución de maniobras acrobáticas durante la evolución de su tabla en los Estados Unidos de América.
           </p>
         </div>
       </section>
@@ -122,11 +122,11 @@ function HistoriaPage() {
       {/* ── FILOSOFÍA OPERACIONAL ── */}
       <section className="bg-white py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel style={{ '--label-color': '#0093d1' }}>Doctrina</SectionLabel>
-          <h2 className="text-4xl md:text-5xl font-black text-[#00296b] tracking-wide mb-5">
+          <SectionLabel style={{ '--label-color': '#006847' }}>Doctrina</SectionLabel>
+          <h2 className="text-4xl md:text-5xl font-black text-[#0b1728] tracking-wide mb-5">
             FILOSOFÍA OPERACIONAL
           </h2>
-          <div className="w-16 h-1 bg-[#fdc400] mb-10" />
+          <div className="w-16 h-1 bg-[#b88a2a] mb-10" />
 
           <div className="space-y-6">
             <p className="text-gray-700 text-base leading-relaxed text-justify">
@@ -143,8 +143,8 @@ function HistoriaPage() {
             </p>
 
             {/* Principios fundamentales */}
-            <div className="bg-[#f0f4f8] border-l-4 border-[#fdc400] p-6 mt-4">
-              <p className="text-[#00296b] text-sm font-black uppercase tracking-widest mb-3">
+            <div className="bg-[#f4f0e8] border-l-4 border-[#b88a2a] p-6 mt-4">
+              <p className="text-[#0b1728] text-sm font-black uppercase tracking-widest mb-3">
                 Principios Fundamentales
               </p>
               <p className="text-gray-700 text-base leading-relaxed text-justify">
@@ -156,15 +156,15 @@ function HistoriaPage() {
       </section>
 
       {/* ── HERÁLDICA ── */}
-      <section className="bg-[#f0f4f8] py-20">
+      <section className="bg-[#f4f0e8] py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="text-[#0093d1] text-[10px] font-black tracking-[0.45em] uppercase mb-3">
+          <p className="text-[#006847] text-[10px] font-black tracking-[0.45em] uppercase mb-3">
             Identidad Visual
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-[#00296b] tracking-wide mb-5">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0b1728] tracking-wide mb-5">
             HERÁLDICA DE LA RODELA
           </h2>
-          <div className="w-16 h-1 bg-[#fdc400] mb-10" />
+          <div className="w-16 h-1 bg-[#b88a2a] mb-10" />
 
           <div className="grid md:grid-cols-2 gap-10 items-start">
 
@@ -172,8 +172,8 @@ function HistoriaPage() {
             <div className="space-y-5">
               {heraldica.map((el, i) => (
                 <div key={i} className="bg-white border border-gray-200 p-5 shadow-sm">
-                  <h4 className="text-[#00296b] text-sm font-black uppercase tracking-wider mb-2 flex items-center gap-2">
-                    <span className="w-4 h-0.5 bg-[#fdc400]" />
+                  <h4 className="text-[#0b1728] text-sm font-black uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <span className="w-4 h-0.5 bg-[#b88a2a]" />
                     {el.titulo}
                   </h4>
                   {el.texto && (
@@ -183,7 +183,7 @@ function HistoriaPage() {
                     <ul className="space-y-1.5 mt-1">
                       {el.lista.map((item, j) => (
                         <li key={j} className="flex items-start gap-2 text-gray-600 text-sm">
-                          <div className="mt-1.5 w-1.5 h-1.5 bg-[#0093d1] flex-shrink-0" />
+                          <div className="mt-1.5 w-1.5 h-1.5 bg-[#006847] flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -193,9 +193,9 @@ function HistoriaPage() {
               ))}
 
               {/* Significado conjunto */}
-              <div className="bg-[#00296b] p-5">
-                <h4 className="text-[#fdc400] text-sm font-black uppercase tracking-wider mb-2 flex items-center gap-2">
-                  <span className="w-4 h-0.5 bg-[#fdc400]" />
+              <div className="bg-[#0b1728] p-5">
+                <h4 className="text-[#b88a2a] text-sm font-black uppercase tracking-wider mb-2 flex items-center gap-2">
+                  <span className="w-4 h-0.5 bg-[#b88a2a]" />
                   Significado Conjunto
                 </h4>
                 <p className="text-white/75 text-sm leading-relaxed">
@@ -206,7 +206,7 @@ function HistoriaPage() {
 
             {/* Imagen de la rodela */}
             <div className="flex flex-col items-center gap-4">
-              <div className="bg-white border-2 border-[#00296b]/10 p-6 shadow-lg w-full flex items-center justify-center">
+              <div className="bg-white border-2 border-[#0b1728]/10 p-6 shadow-lg w-full flex items-center justify-center">
                 <img
                   src="/img/logos/rodela.png"
                   alt="Rodela Águilas Aztecas"
@@ -220,8 +220,8 @@ function HistoriaPage() {
                   className="hidden flex-col items-center justify-center gap-3 py-16 text-center"
                   style={{ display: 'none' }}
                 >
-                  <div className="w-24 h-24 rounded-full border-4 border-[#00296b]/20 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full border-2 border-[#fdc400]/40" />
+                  <div className="w-24 h-24 rounded-full border-4 border-[#0b1728]/20 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full border-2 border-[#b88a2a]/40" />
                   </div>
                   <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest">
                     Imagen de la Rodela
@@ -245,3 +245,4 @@ function HistoriaPage() {
 }
 
 export default HistoriaPage;
+
