@@ -1,276 +1,105 @@
-# Proyecto Aguilas Aztecas
+# Águilas Aztecas 
 
-# Instalación y Configuración del Proyecto
-
-## Requisitos Previos
-
-Antes de comenzar, asegúrate de tener instalado:
-
-* Git
-
-Puedes verificar que Git está instalado ejecutando en cdm o terminal:
-
-```bash
-git --version
-```
-
-# Instalación de Git
-
-Si aún no tienes Git instalado en tu computadora, sigue alguno de los siguientes recursos oficiales:
-
-## Descargar Git
-
-Página oficial de Git:
-
-https://git-scm.com/downloads
-
-Git detectará automáticamente tu sistema operativo (Windows, macOS o Linux) y te ofrecerá la versión adecuada.
-
++
 ---
 
-Una vez instalado, abre una terminal (CMD, PowerShell o Git Bash) y ejecuta:
+## Cómo correr el proyecto
 
 ```bash
-git --version
+# 1. Instalar dependencias (solo la primera vez)
+npm install
+
+# 2. Levantar servidor de desarrollo
+npm run dev
 ```
 
-Si la instalación fue correcta, verás un resultado similar al siguiente:
+Luego abrir en el navegador: **http://localhost:5173/**
 
-```text
-git version 2.51.0.windows.1
+```bash
+# Generar versión final para producción
+npm run build
+
+# Previsualizar el build
+npm run preview
 ```
 
 ---
 
-## Configuración inicial (solo la primera vez)
+## Estructura del proyecto
 
-Configura el nombre y correo electrónico que esta registrado en Git Hub:
-
-```bash
-git config --global user.name "Tu Nombre"
-git config --global user.email "tu_correo@ejemplo.com"
 ```
-
-Puedes comprobar la configuración con:
-
-```bash
-git config --list
-```
-
-A partir de este punto ya puedes continuar con el proceso de clonación del repositorio.
-
----
-
-# Paso 1. Elegir la ubicación del proyecto
-
-Abre una terminal (CMD, PowerShell o Git Bash) y navega hasta la carpeta donde deseas guardar el proyecto.
-
-Por ejemplo, si deseas guardarlo en la carpeta **Documentos**:
-
-```bash
-cd Documents
-```
-
-Si deseas guardarlo en una carpeta específica:
-
-```bash
-cd C:\Users\TuUsuario\Desktop\Proyectos
-```
-
-Puedes verificar tu ubicación actual con:
-
-```bash
-pwd
-```
-
-o en Windows:
-
-```bash
-cd
+AguilasAztecas/
+│
+├── public/                        # Archivos estáticos (accesibles desde el navegador)
+│   ├── img/
+│   │   ├── aviones/               # Fotos y video de los aviones
+│   │   │   └── 01 Texans (1).mp4  # Video de fondo del Hero
+│   │   ├── galeria/               # Fotos adicionales para la galería
+│   │   ├── pilotos/               # Fotos de los pilotos
+│   │   └── logos/                 # Logos institucionales (FAMEX, etc.)
+│   └── videos/                    # Videos adicionales
+│
+├── src/
+│   ├── pages/                     # Una página por sección del sitio
+│   │   ├── Home.jsx               # Página principal (/)
+│   │   ├── HistoriaPage.jsx       # Página Historia (/historia)
+│   │   ├── MisionPage.jsx         # Página Misión (/mision)
+│   │   ├── ParticipacionesPage.jsx# Página Participaciones (/participaciones)
+│   │   ├── GaleriaPage.jsx        # Página Galería (/galeria)
+│   │   └── ContactoPage.jsx       # Página Contacto (/contacto)
+│   │
+│   ├── components/                # Componentes reutilizables
+│   │   ├── Navbar.jsx             # Barra de navegación (aparece en todas las páginas)
+│   │   ├── Hero.jsx               # Sección principal con video de fondo y título
+│   │   ├── StatsBar.jsx           # Barra dorada con cifras clave (1915, 2017, etc.)
+│   │   ├── Historia.jsx           # Sección de historia con timeline
+│   │   ├── MisionVision.jsx       # Cards de Misión, Visión y Objetivo
+│   │   ├── Participaciones.jsx    # Timeline de espectáculos aéreos
+│   │   ├── Heraldica.jsx          # Descripción de la rodela heráldica
+│   │   ├── Galeria.jsx            # Grid de fotos y videos
+│   │   └── Footer.jsx             # Pie de página
+│   │
+│   ├── App.jsx                    # Router principal — define las rutas del sitio
+│   ├── main.jsx                   # Punto de entrada de React
+│   └── index.css                  # Estilos globales (Tailwind + scroll suave)
+│
+├── index.html                     # HTML base (aquí se cargan las fuentes de Google)
+├── package.json                   # Dependencias del proyecto
+└── vite.config.js                 # Configuración de Vite
 ```
 
 ---
 
-# Paso 2. Clonar el repositorio
+## Paleta de colores
 
-Ejecuta el siguiente comando reemplazando la URL por la del repositorio correspondiente:
-
-```bash
-git clone https://github.com/BrandonCastilloHDS/P-ginaAguilasAztecas.git
-```
-
-Esto descargará todos los archivos del proyecto en una nueva carpeta.
-
----
-
-# Paso 3. Entrar al proyecto
-
-Una vez finalizada la descarga, ingresa a la carpeta creada:
-
-
+| Color | Hex | Uso |
+|---|---|---|
+| Navy oscuro | `#00296b` | Fondo principal, navbar, footer |
+| Navy medio | `#003f87` | Sección Historia, cards |
+| Azul medio | `#00519e` | Sección Heráldica, acentos |
+| Azul cielo | `#0093d1` | Detalles, textos secundarios |
+| Dorado | `#fdc400` | Acento principal, bordes, botones CTA |
+| Dorado claro | `#ffe84f` | Hover, acentos secundarios |
 
 ---
 
-# Paso 4. Verificar la rama actual
+## Rutas del sitio
 
-Comprueba en qué rama te encuentras:
-
-```bash
-git branch
-```
-
-Normalmente aparecerá:
-
-```text
-* main
-```
+| URL | Página | Archivo |
+|---|---|---|
+| `/` | Inicio | `pages/Home.jsx` |
+| `/historia` | Historia | `pages/HistoriaPage.jsx` |
+| `/mision` | Misión | `pages/MisionPage.jsx` |
+| `/participaciones` | Participaciones | `pages/ParticipacionesPage.jsx` |
+| `/galeria` | Galería | `pages/GaleriaPage.jsx` |
+| `/contacto` | Contacto | `pages/ContactoPage.jsx` |
 
 ---
 
-# Paso 5. Actualizar el repositorio
+## Tecnologías
 
-Antes de comenzar a trabajar, descarga los cambios más recientes:
-
-```bash
-git pull origin main
-```
-
-De esta forma tendrás la versión más actualizada del proyecto.
-
----
-
-# Paso 6. Crear una rama de trabajo
-
-Cada desarrollador debe trabajar en su propia rama.
-
-Crea una nueva rama utilizando tu nombre o un identificador único.
-
-Ejemplo:
-
-```bash
-git switch -c nombre-rama
-```
-
-También puedes utilizar:
-
-```bash
-git checkout -b nombre-rama
-```
-
-Verifica que te encuentras en la nueva rama:
-
-```bash
-git branch
-```
-
-Salida esperada:
-
-```text
-main
-* nombre-rama
-```
-
----
-
-# Paso 7. Subir la rama al repositorio
-
-La primera vez que crees la rama debes publicarla en GitHub:
-
-```bash
-git push -u origin nombre-rama
-```
-
-Después de este paso, únicamente será necesario utilizar:
-
-```bash
-git push
-```
-
----
-
-# Paso 8. Guardar cambios
-
-Una vez realizadas las modificaciones:
-
-Agregar archivos al área de preparación:
-
-```bash
-git add .
-```
-
-Crear un commit:
-
-```bash
-git commit -m "Descripción de los cambios realizados"
-```
-
-Subir los cambios:
-
-```bash
-git push
-```
-
----
-
-# Paso 9. Obtener los cambios realizados por otros integrantes
-
-Antes de comenzar una nueva sesión de trabajo, actualiza tu rama con los cambios más recientes del proyecto.
-
-Descarga la información del repositorio remoto:
-###Aqui tengo duda preguntar a brandon
-
-```bash
-git fetch origin
-```
-
-Integra los cambios de la rama principal:
-
-```bash
-git merge origin/main
-```
-
-En caso de que el proyecto utilice otra rama principal (por ejemplo `devB`), reemplaza `main` por el nombre correspondiente.
-
----
-
-# Comandos útiles
-
-Ver el estado del repositorio:
-
-```bash
-git status
-```
-
-
-Ver la rama actual:
-
-```bash
-git branch
-```
-
-Ver todas las ramas:
-
-```bash
-git branch -a
-```
-
-Cambiar de rama:
-
-```bash
-git switch nombre-rama
-```
-
-Actualizar la rama principal:
-
-```bash
-git pull origin main
-```
-
-Ver el historial de commits:
-
-```bash
-git log --oneline
-```
-
----
-
+- [React 19](https://react.dev/)
+- [Vite 8](https://vite.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [React Router v7](https://reactrouter.com/)
+- Fuentes: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed) + [Rajdhani](https://fonts.google.com/specimen/Rajdhani)
