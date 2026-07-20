@@ -39,15 +39,21 @@ function Navbar() {
           : 'bg-[#0b1728] py-3'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 flex justify-between items-center">
+      <div className="flex items-center gap-4 flex-1">
 
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-4">
+        <a
+          href="https://www.f-airmexico.com.mx/"
+        >
           <img
             src="/img/logos/FAMEX2027.png"
             alt="FAMEX Logo"
-            className="h-14 w-auto drop-shadow-md"
+            className="h-14 w-auto drop-shadow-md hover:scale-105 transition-transform"
           />
+        </a>
+
+        <Link to="/" >
+          
           <div className="border-l-2 border-[#b88a2a]/55 pl-4">
             <p className="text-[#d4af37] text-[9px] font-bold tracking-[0.35em] uppercase leading-none mb-0.5">
               Fuerza Aérea Mexicana
@@ -62,7 +68,7 @@ function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-7 ml-auto">
           {links.map(link => (
             <Link
               key={link.to}
@@ -81,13 +87,10 @@ function Navbar() {
           ))}
         </div>
 
-
-
-        {/* Hamburger */}
         <button
           onClick={() => setMenuOpen(o => !o)}
           aria-label="Abrir menú"
-          className="lg:hidden flex flex-col justify-center gap-1.5 p-2 cursor-pointer"
+          className="lg:hidden ml-auto flex flex-col justify-center gap-1.5 p-2 cursor-pointer"
         >
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
@@ -96,27 +99,47 @@ function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-96' : 'max-h-0'}`}>
-        <div className="bg-[#0b1728] border-t border-[#d4af37]/20">
-          {links.map(link => (
-          <Link
-            key={link.to}
-            to={link.to}
-            className={`relative flex items-center gap-3 text-xs font-bold tracking-[0.18em] uppercase transition-colors duration-200 group ${
-              isActive(link.to) ? 'text-[#d4af37]' : 'text-white/85 hover:text-[#d4af37]'
+<div
+  className={`lg:hidden overflow-hidden transition-all duration-500 ${
+    menuOpen ? 'max-h-[600px]' : 'max-h-0'
+  }`}
+>
+  <div className="bg-[#081627] border-t border-[#d4af37]/20 px-4 py-5">
+
+    <div className="flex flex-col gap-3">
+
+      {links.map(link => (
+        <Link
+          key={link.to}
+          to={link.to}
+          onClick={() => setMenuOpen(false)}
+          className={`flex items-center gap-5 rounded-2xl px-5 py-5 transition-all duration-300
+            ${
+              isActive(link.to)
+                ? 'bg-[#12233b] text-[#d4af37] shadow-lg'
+                : 'text-white hover:bg-[#10233d]'
+            }`}
+        >
+          <span
+            className={`transition-colors ${
+              isActive(link.to)
+                ? 'text-[#d4af37]'
+                : 'text-gray-200'
             }`}
           >
-            
-            <div className="flex items-center gap-1">
-              {link.icon}
-              <span>{link.label}</span>
-            </div>
+            {link.icon}
+          </span>
 
-            
-          </Link>
-        ))}
-        </div>
-      </div>
+          <span className="font-black uppercase tracking-[0.25em] text-base">
+            {link.label}
+          </span>
+        </Link>
+      ))}
+
+    </div>
+
+  </div>
+</div>
     </nav>
   );
 }

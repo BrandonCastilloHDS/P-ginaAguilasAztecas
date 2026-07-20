@@ -73,7 +73,7 @@ function HistoriaPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 py-16 pb-20 relative z-10">
           <SectionLabel>F.A.M. · Escuadrón Aéreo 402</SectionLabel>
-          <SectionTitle>RESEÑA HISTÓRICA</SectionTitle>
+          <SectionTitle>HISTORIA  DE ÁGUILAS AZTECAS</SectionTitle>
           <Divider />
           <p className="text-white/60 text-sm mt-4 tracking-wider">
             Escuadrilla Acrobática "Águilas Aztecas"
@@ -88,6 +88,46 @@ function HistoriaPage() {
           </p>
         </div>
       </div>
+
+
+      <section className="bg-[#0f223d] py-12 border-y border-white/10">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      <div className="text-center">
+        <p className="text-5xl font-black text-[#b88a2a]">1915</p>
+        <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
+          Fundación de la FAM
+        </p>
+      </div>
+
+      <div className="text-center">
+        <p className="text-5xl font-black text-[#b88a2a]">2017</p>
+        <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
+          Nacen las Águilas Aztecas
+        </p>
+      </div>
+
+      <div className="text-center">
+        <p className="text-5xl font-black text-[#b88a2a]">2024</p>
+        <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
+          Primera misión internacional
+        </p>
+      </div>
+
+      <div className="text-center">
+        <p className="text-5xl font-black text-[#b88a2a]">2025</p>
+        <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
+          Certificación FAA
+        </p>
+      </div>
+
+    </div>
+
+  </div>dificiles
+</section>
+
 
       {/* ── HISTORIA NARRATIVA ── */}
       <section className="bg-[#132b49] py-20">

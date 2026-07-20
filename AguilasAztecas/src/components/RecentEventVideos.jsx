@@ -5,16 +5,17 @@ const recentVideos = [
 
     description: [
     'Las instalaciones del estadio “Ciudad de México” se constituyeron en un escenario de relevancia mundial donde la Escuadrilla Acrobática “Águilas Aztecas” engalanó el cielo del estadio de futbol, con una demostración aérea de precisión y profesionalismo. Esta agrupación de la Fuerza Aérea Mexicana se refleja como un símbolo de modernidad, capacidad técnica y acercamiento con la sociedad; realizó evoluciones que captaron la atención de millones de espectadores dentro y fuera del estadio al realizar maniobras adornadas con humo tricolor.',
-    'Dos helicópteros UH-60 de la Fuerza Aérea y de la Guardia Nacional protagonizaron uno de los momentos más emotivos y representativos del acto protocolario, al realizar un sobrevuelo llevando suspendida una bandera monumental de México ante la mirada de miles de asistentes y millones de espectadores alrededor del mundo; estas acciones se consolidaron como una nueva expresión del talento, preparación y excelencia de los pilotos militares mexicanos.'],
+   
+    ],
     src: "/img/aviones/Ceremonia_inagural_de_la_copa.mp4",
     orientation: "vertical",
   },
 
   {
     id: 2,
-    title: "El cielo de Zapopan se vistió de tricolor.",
+    title: "Águilas Aztecas transformando el cielo en un lienzo de orgullo nacional",
     description: [
-      "En el marco del partido de la Copa Mundial de Futbol 2026, México vs. Corea del Sur, realizado el 18 de junio de 2026 en el estadio Guadalajara en Zapopan, Jalisco, la Escuadrilla Acrobática “Águilas Aztecas” de la Fuerza Aérea Mexicana engalanó el cielo con una demostración aérea de precisión, disciplina y profesionalismo.",
+      "Disciplina, precisión y templanza, definen en cada maniobra de alta acrobacia a la escuadrilla de demostración aérea Aguilas Aztecas, transformando el cielo en un lienzo de orgullo nacional, donde la sincronización y el control absoluto de las aeronaves, demuestran el riguroso y extenuante adiestramiento de nuestros pilotos de la Fuerza Aérea Mexicana ",
      
     ],
     src: "/img/aviones/video2.mp4",
