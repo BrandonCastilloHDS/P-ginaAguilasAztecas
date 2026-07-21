@@ -10,7 +10,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const links = [
   { to: '/', label: 'Inicio', icon: <HomeIcon sx={{ fontSize: 'medium' }} /> },
-  {to: '/historia', label: 'Historia', icon: <MenuBookIcon sx={{ fontSize: 'medium' }} /> },
+  {to: '/historia', label: 'Sobre Nosotros', icon: <MenuBookIcon sx={{ fontSize: 'medium' }} /> },
   { to: '/mision', label: 'Misión', icon: <AdsClickIcon sx={{ fontSize: 'medium' }} /> },
   { to: '/participaciones', label: 'Participaciones', icon: <GroupsIcon sx={{ fontSize: 'medium' }} /> },
   { to: '/galeria', label: 'Galería', icon: <CollectionsIcon sx={{ fontSize: 'medium' }} /> },
@@ -39,7 +39,7 @@ function Navbar() {
           : 'bg-[#0b1728] py-3'
       }`}
     >
-      <div className="flex items-center gap-4 flex-1">
+      <div className="flex items-center ml-8 mr-8 gap-4 flex-1">
 
         {/* Brand */}
         <a
