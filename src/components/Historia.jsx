@@ -1,5 +1,6 @@
 
 import Footer from '../components/Footer';
+import Mision from '../components/MisionVision';
 import { useState } from 'react';
 
 
@@ -107,7 +108,7 @@ function HistoriaPage() {
               checked={opcionActiva === 'historia'}
               onChange={() => setOpcionActiva('historia')}
             />
-            <div className="flex items-center justify-center text-[11px] font-bold uppercase tracking-[0.25em] text-white/50 peer-checked:bg-gradient-to-r peer-checked:from-[#d4af37] peer-checked:to-[#b88a2a] peer-checked:text-[#050B14] peer-checked:shadow-[0_0_15px_rgba(184,138,42,0.4)] py-2.5 px-6 rounded-lg transition-all duration-300">
+            <div className="flex items-center justify-center text-sm font-bold uppercase tracking-[0.25em] text-white/50 peer-checked:bg-gradient-to-r peer-checked:from-[#d4af37] peer-checked:to-[#b88a2a] peer-checked:text-[#050B14] peer-checked:shadow-[0_0_15px_rgba(184,138,42,0.4)] py-2.5 px-6 rounded-lg transition-all duration-300">
               Historia
             </div>
           </label>
@@ -122,16 +123,30 @@ function HistoriaPage() {
               checked={opcionActiva === 'heraldica'}
               onChange={() => setOpcionActiva('heraldica')}
             />
-            <div className="flex items-center justify-center text-[11px] font-bold uppercase tracking-[0.25em] text-white/50 peer-checked:bg-gradient-to-r peer-checked:from-[#d4af37] peer-checked:to-[#b88a2a] peer-checked:text-[#050B14] peer-checked:shadow-[0_0_15px_rgba(184,138,42,0.4)] py-2.5 px-6 rounded-lg transition-all duration-300">
+            <div className="flex items-center justify-center text-sm font-bold uppercase tracking-[0.25em] text-white/50 peer-checked:bg-gradient-to-r peer-checked:from-[#d4af37] peer-checked:to-[#b88a2a] peer-checked:text-[#050B14] peer-checked:shadow-[0_0_15px_rgba(184,138,42,0.4)] py-2.5 px-6 rounded-lg transition-all duration-300">
               Heráldica
             </div>
           </label>
 
+          {/* Opción para la visión y misión unu */}
+          <label className="flex-grow cursor-pointer">
+            <input
+              type="radio"
+              name="submenu_historia"
+              value="menu"
+              className="peer hidden"
+              checked={opcionActiva === 'mision'}
+              onChange={() => setOpcionActiva('mision')}
+            />
+            <div className="flex items-center justify-center text-sm font-bold uppercase tracking-[0.25em] text-white/50 peer-checked:bg-gradient-to-r peer-checked:from-[#d4af37] peer-checked:to-[#b88a2a] peer-checked:text-[#050B14] peer-checked:shadow-[0_0_15px_rgba(184,138,42,0.4)] py-2.5 px-6 rounded-lg transition-all duration-300">
+              Misión
+            </div>
+          </label>
         </div>
       </section>
 
-      {/*Aquí es lo de las fechas  */}
-      {/* {opcionActiva === 'historia' && (
+      {/*Aquí es lo de misión  */}
+      {opcionActiva === 'mision' && (
         <section className="bg-[#0f223d] py-12 border-y border-white/10 ">
 
           <div className="max-w-7xl mx-auto px-6">
@@ -169,10 +184,11 @@ function HistoriaPage() {
             </div>
 
           </div>
+          <Mision/>
         </section>
 
 
-      )} */}
+      )}
 
 
       {/* ── HISTORIA NARRATIVA ── */}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const eventos = [
   {
     year: '2017',
@@ -194,7 +195,9 @@ function Participaciones() {
       </div>
 
     </section>
+   
   );
+  
 }
 
 export default Participaciones;
