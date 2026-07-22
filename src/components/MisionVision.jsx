@@ -1,99 +1,155 @@
+import {
+  Heart,
+  ShieldCheck,
+  AlertTriangle,
+  UserCheck,
+  TrendingUp,
+  Award,
+} from 'lucide-react';
 const cards = [
   {
     numeral: 'I',
     title: 'MISIÓN',
-    accentColor: '#0b1728',
+    accentColor: '#102a43', // 
+    bgPattern: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=600', // Ilustración aérea / ciudad
     text: 'Establecer un vínculo entre las Fuerzas Armadas Mexicanas con la población civil, a través de Operaciones Aéreas Militares que reflejen la destreza, compromiso y dedicación del personal de la Fuerza Aérea Mexicana.',
   },
   {
     numeral: 'II',
     title: 'VISIÓN',
-    accentColor: '#006847',
+    accentColor: '#064e3b', 
+    bgPattern: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600', // Mapa global / conectividad
     text: 'Convertirse en símbolo emblemático de la DEFENSA/FAM a nivel internacional para inspirar orgullo nacional y admiración en otras naciones.',
   },
   {
     numeral: 'III',
     title: 'OBJETIVO',
-    accentColor: '#8f1020',
+    accentColor: '#7f1d1d', 
+    bgPattern: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600', // Engranajes / tecnología
     text: 'Contribuir al fortalecimiento de la imagen institucional de la DEFENSA a través de la demostración de destreza, promoviendo el orgullo e identidad nacional e incrementando la seguridad operacional en todos los eventos cívico-militares.',
   },
 ];
 
 const principios = [
-  'Preservación de la vida humana',
-  'Salvaguarda del material aéreo',
-  'Mitigación de riesgos operacionales',
-  'Responsabilidad y profesionalismo',
-  'Mejora continua de procedimientos',
-  'Estricto sentido de pertenencia institucional',
+  { text: 'Preservación de la vida humana', icon: Heart, color: '#102a43' },
+  { text: 'Salvaguarda del material aéreo', icon: ShieldCheck, color: '#064e3b' },
+  { text: 'Mitigación de riesgos operacionales', icon: AlertTriangle, color: '#064e3b' },
+  { text: 'Responsabilidad y profesionalismo', icon: UserCheck, color: '#064e3b' },
+  { text: 'Mejora continua de procedimientos', icon: TrendingUp, color: '#7f1d1d' },
+  { text: 'Estricto sentido de pertenencia institucional', icon: Award, color: '#7f1d1d' },
 ];
 
 function MisionVision() {
   return (
-    <section id="mision" className="bg-[#f4f0e8] py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="mision" className="bg-[#fcfbf9] py-20 text-gray-800 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-[#b88a2a] text-[10px] font-bold tracking-[0.5em] uppercase mb-3">
+        {/* Header principal */}
+        <div className="text-center mb-14">
+          <p className="text-[#8c734b] text-xs font-bold tracking-[0.4em] uppercase mb-2">
             Filosofía Operacional
           </p>
-          <h2 className="text-5xl md:text-6xl font-black text-[#0b1728] mb-4 tracking-wide">
+          <h2 className="text-4xl md:text-5xl font-black text-[#102a43] tracking-wide mb-3">
             MISIÓN, VISIÓN Y OBJETIVO
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#006847] via-[#E7E7E7] to-[#ce1126] mx-auto" />
+          {/* Línea tricolor sutil */}
+          <div className="w-24 h-1 mx-auto flex rounded-full overflow-hidden">
+            <div className="w-1/3 bg-[#064e3b]"></div>
+            <div className="w-1/3 bg-white"></div>
+            <div className="w-1/3 bg-[#7f1d1d]"></div>
+          </div>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        {/* Tarjetas Principales */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {cards.map((card, i) => (
             <div
               key={i}
-              className="group flex flex-col overflow-hidden border border-[#0b1728]/10 bg-white/70 shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="relative group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200 flex flex-col justify-between"
             >
-              {/* Top color bar */}
+              {/* Barra de color superior */}
               <div className="h-1.5 w-full" style={{ backgroundColor: card.accentColor }} />
 
-              <div className="bg-white/85 p-8 flex-1 border border-white/70 group-hover:border-[#b88a2a]/35 transition-colors duration-300">
-                {/* Numeral badge */}
-                <div
-                  className="inline-flex items-center justify-center w-12 h-12 border-2 text-lg font-black mb-5"
-                  style={{ borderColor: card.accentColor, color: card.accentColor }}
-                >
-                  {card.numeral}
+              <div className="p-8 relative z-10 flex-1 flex flex-col justify-between">
+                <div>
+                  {/* Badge numeral */}
+                  <div
+                    className="inline-flex items-center justify-center w-10 h-10 border-2 font-black text-base mb-4 bg-white/80 backdrop-blur-sm"
+                    style={{ borderColor: card.accentColor, color: card.accentColor }}
+                  >
+                    {card.numeral}
+                  </div>
+
+                  <h3
+                    className="text-2xl font-black tracking-wider mb-3"
+                    style={{ color: card.accentColor }}
+                  >
+                    {card.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm leading-relaxed font-normal relative z-10 bg-white/70 backdrop-blur-[2px] rounded p-1">
+                    {card.text}
+                  </p>
                 </div>
-
-                <div className="w-8 h-0.5 bg-[#b88a2a] mb-4" />
-
-                <h3
-                  className="text-2xl font-black tracking-[0.15em] mb-4"
-                  style={{ color: card.accentColor }}
-                >
-                  {card.title}
-                </h3>
-                <p className="text-[#253348]/75 leading-relaxed text-sm">{card.text}</p>
               </div>
+
+              {/* Imagen / Marca de agua de fondo integrada */}
+              <div 
+                className="h-32 w-full opacity-20 group-hover:opacity-35 transition-opacity duration-300 bg-cover bg-center mix-blend-multiply"
+                style={{ backgroundImage: `url(${card.bgPattern})` }}
+              />
             </div>
           ))}
         </div>
 
-        {/* Principios fundamentales */}
-        <div className="bg-white/65 border-l-4 border-[#b88a2a] p-8 shadow-sm">
-          <p className="text-[#006847] text-[9px] font-bold tracking-[0.4em] uppercase mb-2">
-            Marco de Actuación
-          </p>
-          <h4 className="text-[#0b1728] text-xl font-black uppercase tracking-wider mb-6">
-            Principios Fundamentales
-          </h4>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {principios.map((p, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <div className="mt-1.5 w-2 h-2 bg-[#006847] shrink-0" />
-                <p className="text-[#253348] text-sm font-medium leading-snug">{p}</p>
-              </div>
-            ))}
+        {/* Marco de Actuación: Línea de tiempo de Principios */}
+        <div className="bg-[#f4f1ea] border border-[#d3c7b2] rounded-xl p-8 shadow-inner">
+          <div className="mb-8">
+            <p className="text-[#8c734b] text-[10px] font-bold tracking-[0.3em] uppercase mb-1">
+              Marco de Actuación
+            </p>
+            <h4 className="text-[#102a43] text-2xl font-black uppercase tracking-wider">
+              Principios Fundamentales
+            </h4>
+          </div>
+
+          {/* Secuencia Horizontal (Línea conectora) */}
+          <div className="relative">
+            {/* Línea dorada conectora (Visible solo en desktop) */}
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-[#d3c7b2] -translate-y-6 z-0" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 relative z-10">
+              {principios.map((p, i) => {
+                const IconComponent = p.icon;
+                return (
+                  <div key={i} className="flex flex-col items-center text-center group">
+                    {/* Badge hexagonal / circular con icono */}
+                    <div 
+                      className="w-12 h-12 rounded-full bg-white border-2 flex items-center justify-center shadow-md mb-3 group-hover:scale-110 transition-transform duration-200"
+                      style={{ borderColor: p.color }}
+                    >
+                      <IconComponent className="w-5 h-5" style={{ color: p.color }} />
+                    </div>
+
+                    {/* Número de secuencia */}
+                    <span 
+                      className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white mb-2"
+                      style={{ backgroundColor: p.color }}
+                    >
+                      0{i + 1}
+                    </span>
+
+                    {/* Texto del principio */}
+                    <p className="text-xs font-semibold text-gray-800 leading-tight">
+                      {p.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );
