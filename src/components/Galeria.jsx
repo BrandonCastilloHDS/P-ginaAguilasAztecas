@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import Navegar from '../components/NavegarGaleria';
 
+
 const fotos = Array.from({ length: 13}, (_, i) => {
   const numero = i + 1;
   return {
@@ -110,7 +111,9 @@ function Galeria() {
         </div>
       )}
     </section>
+    
   );
+  
 }
 
 export default Galeria;
