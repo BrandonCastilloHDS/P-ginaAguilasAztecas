@@ -13,7 +13,6 @@ const links = [
   { to: '/historia', label: 'Sobre Nosotros', icon: <MenuBookIcon sx={{ fontSize: 'medium' }} /> },
   { to: '/participaciones', label: 'Participaciones', icon: <GroupsIcon sx={{ fontSize: 'medium' }} /> },
   { to: '/galeria', label: 'Galería', icon: <CollectionsIcon sx={{ fontSize: 'medium' }} /> },
-  { to: '/contacto', label: 'Contacto', icon: <AlternateEmailIcon sx={{ fontSize: 'medium' }} /> },
 ];
 
 function Navbar() {
