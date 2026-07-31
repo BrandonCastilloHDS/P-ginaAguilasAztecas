@@ -147,47 +147,9 @@ function HistoriaPage() {
 
       {/*Aquí es lo de misión  */}
       {opcionActiva === 'mision' && (
-        <section className="bg-[#0f223d] py-12 border-y border-white/10 ">
-
-          <div className="max-w-7xl mx-auto px-6">
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-              <div className="text-center">
-                <p className="text-5xl font-black text-[#b88a2a]">1915</p>
-                <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
-                  Fundación de la FAM
-                </p>
-              </div>
-
-              <div className="text-center">
-                <p className="text-5xl font-black text-[#b88a2a]">2017</p>
-                <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
-                  Nacen las Águilas Aztecas
-                </p>
-              </div>
-
-              <div className="text-center">
-                <p className="text-5xl font-black text-[#b88a2a]">2024</p>
-                <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
-                  Primera misión internacional
-                </p>
-              </div>
-
-              <div className="text-center">
-                <p className="text-5xl font-black text-[#b88a2a]">2025</p>
-                <p className="text-white/70 mt-2 uppercase tracking-widest text-xs">
-                  Certificación FAA
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+      
           <Mision/>
-        </section>
-
-
+    
       )}
 
 
@@ -218,7 +180,7 @@ function HistoriaPage() {
 
           </div>
 
-          <div className='mt-3'> 
+          <div className='m-auto w-250'> 
             <img src="public/img/aviones/avion_2.webp" alt="escuadrilla" />
           </div>
         </section>
@@ -261,9 +223,7 @@ function HistoriaPage() {
 
       <section className="bg-[#132b49] py-20 ">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="text-[#006847] text-[10px] font-black tracking-[0.45em] uppercase mb-3">
-            Identidad Visual
-          </p>
+          
           <h2 className="text-4xl md:text-5xl font-black text-[#b88a2a] tracking-wide mb-5">
             HERÁLDICA DE LA RODELA
           </h2>
