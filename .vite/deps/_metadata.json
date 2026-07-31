@@ -1,0 +1,98 @@
+{
+  "hash": "e9db5d53",
+  "configHash": "e01940e0",
+  "lockfileHash": "0b0a6b95",
+  "browserHash": "854d3ef4",
+  "optimized": {
+    "@mui/icons-material/AdsClick": {
+      "src": "../../node_modules/@mui/icons-material/AdsClick.mjs",
+      "file": "@mui_icons-material_AdsClick.js",
+      "fileHash": "c39f6287",
+      "needsInterop": false
+    },
+    "@mui/icons-material/AlternateEmail": {
+      "src": "../../node_modules/@mui/icons-material/AlternateEmail.mjs",
+      "file": "@mui_icons-material_AlternateEmail.js",
+      "fileHash": "ac7e04d7",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Collections": {
+      "src": "../../node_modules/@mui/icons-material/Collections.mjs",
+      "file": "@mui_icons-material_Collections.js",
+      "fileHash": "42447f41",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Groups": {
+      "src": "../../node_modules/@mui/icons-material/Groups.mjs",
+      "file": "@mui_icons-material_Groups.js",
+      "fileHash": "922540c1",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Home": {
+      "src": "../../node_modules/@mui/icons-material/Home.mjs",
+      "file": "@mui_icons-material_Home.js",
+      "fileHash": "9c3fe43f",
+      "needsInterop": false
+    },
+    "@mui/icons-material/MenuBook": {
+      "src": "../../node_modules/@mui/icons-material/MenuBook.mjs",
+      "file": "@mui_icons-material_MenuBook.js",
+      "fileHash": "64bfd0b2",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "16cf4f81",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "file": "lucide-react.js",
+      "fileHash": "8e9f7d08",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "f51bf44b",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "1fddd829",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "81ebb9a9",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "f129ec2f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "createSvgIcon-DONd2oJW": {
+      "file": "createSvgIcon-DONd2oJW.js",
+      "isDynamicEntry": false
+    },
+    "emotion-is-prop-valid.esm-BWxFxQl5": {
+      "file": "emotion-is-prop-valid.esm-BWxFxQl5.js",
+      "isDynamicEntry": false
+    },
+    "react-Dc_4GEhg": {
+      "file": "react-Dc_4GEhg.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-gzy-90ZU": {
+      "file": "react-dom-gzy-90ZU.js",
+      "isDynamicEntry": false
+    }
+  }
+}
