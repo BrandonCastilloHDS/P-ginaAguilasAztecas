@@ -180,8 +180,11 @@ function HistoriaPage() {
 
           </div>
 
-          <div className='md:m-auto md:w-200'> 
-            <img src="public/img/aviones/avion_2.webp" alt="escuadrilla" />
+          <div className='mt-3'> 
+            <img src="img/aviones/avion_2.webp" alt="escuadrilla" />
+
+
+
           </div>
         </section>
       )}
@@ -272,7 +275,7 @@ function HistoriaPage() {
             <div className="flex flex-col items-center gap-4">
               <div className="bg-white border-2 border-[#0b1728]/10 p-6 shadow-lg w-full flex items-center justify-center">
                 <img
-                  src="/public/logo-aguilas-aztecas.svg"
+                  src="/logo-aguilas-aztecas.svg"
                   alt="Rodela Águilas Aztecas"
                   className="w-full max-w-xs"
                   onError={(e) => {
