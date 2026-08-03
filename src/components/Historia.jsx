@@ -180,7 +180,7 @@ function HistoriaPage() {
 
           </div>
 
-          <div className='m-auto w-250'> 
+          <div className='md:m-auto md:w-200'> 
             <img src="public/img/aviones/avion_2.webp" alt="escuadrilla" />
           </div>
         </section>
