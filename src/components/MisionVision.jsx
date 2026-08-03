@@ -32,7 +32,7 @@ const cards = [
 
 const principios = [
   { text: 'Preservación de la vida humana', icon: Handshake, color: '#102a43' },
-  { text: 'Salvaguarda del material aéreo', icon: ShieldCheck, color: '#064e3b' },
+  { text: 'Salvaguarda del material aéreo', icon: ShieldCheck, color: '#102a43' },
   { text: 'Mitigación de riesgos operacionales', icon: AlertTriangle, color: '#064e3b' },
   { text: 'Responsabilidad y profesionalismo', icon: UserCheck, color: '#064e3b' },
   { text: 'Mejora continua de procedimientos', icon: TrendingUp, color: '#7f1d1d' },
@@ -125,7 +125,7 @@ function MisionVision() {
                   <div key={i} className="flex flex-col items-center text-center group">
                     {/* Badge hexagonal / circular con icono */}
                     <div 
-                      className="w-12 h-12 rounded-full bg-white  border-2 flex items-center justify-center shadow-md mb-3 group-hover:scale-110 transition-transform duration-200"
+                      className="w-12 h-12 rounded-full bg-white border-2 flex items-center justify-center shadow-md mb-3 group-hover:scale-110 transition-transform duration-200"
                       
                     >
                       <IconComponent className="w-5 h-5 " />
