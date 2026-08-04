@@ -57,8 +57,8 @@ export default function AirplaneAnimation({
         }}
         transition={{
           duration,
-          ease: [0.42, 0, 0.58, 1],
-          times: [0, 0.35, 0.45, 1],
+          ease: [0.12, 0, 0.18, 0.18],
+          times: [0, 0.10, 0.10, 0.10, 0.70],
         }}
         onAnimationComplete={onComplete}
       />
