@@ -5,7 +5,7 @@ function ParticipacionesPage() {
   return(
     <>
     
-    <Participaciones />,
+    <Participaciones />
     <Footer/>
     </>
 
