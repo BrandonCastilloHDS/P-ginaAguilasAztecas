@@ -13,12 +13,20 @@ import ContactoPage        from './pages/ContactoPage';
 function AppContent() {
   const location = useLocation();
   const [hiddenAirplanePath, setHiddenAirplanePath] = useState(null);
+  const [lightTheme, setLightTheme] = useState(() => {
+    return localStorage.getItem('aguilas-theme') === 'light';
+  });
   const showAirplane = hiddenAirplanePath !== location.pathname;
+
+  useEffect(() => {
+    document.body.classList.toggle('theme-light', lightTheme);
+    localStorage.setItem('aguilas-theme', lightTheme ? 'light' : 'dark');
+  }, [lightTheme]);
 
   useEffect(() => {
     const hideAirplane = setTimeout(() => {
       setHiddenAirplanePath(location.pathname);
-    }, 1100);
+    }, 650);
 
     return () => clearTimeout(hideAirplane);
   }, [location.pathname]);
@@ -28,6 +36,7 @@ function AppContent() {
       <AirplaneAnimation
         key={location.pathname}
         className="fixed inset-0 overflow-hidden bg-[#0b1728] pointer-events-none z-50"
+        duration={0.45}
         onComplete={() => setHiddenAirplanePath(location.pathname)}
       />
     );
@@ -35,7 +44,10 @@ function AppContent() {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        lightTheme={lightTheme}
+        onToggleTheme={() => setLightTheme(theme => !theme)}
+      />
       <Routes>
         <Route path="/"                element={<Home />} />
         <Route path="/historia"        element={<HistoriaPage />} />
