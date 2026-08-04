@@ -37,7 +37,7 @@ function Navegar() {
                 min-w-0 px-2 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ease-in-out
                 ${esActivo 
                   ? 'bg-[#0b1728] text-white shadow-md scale-105' 
-                  : 'text-gray-600 hover:bg-[#0b1728]/5 hover:text-[#0b1728]'
+                  : 'text-white hover:bg-[#0b1728]/5 hover:text-[#0b1728]'
                 }
               `}
             >

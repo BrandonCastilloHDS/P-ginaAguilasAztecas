@@ -1,4 +1,5 @@
 import Galeria from '../components/Galeria';
+import Footer from '../components/Footer';
 
 
 
@@ -9,6 +10,7 @@ function GaleriaPage() {
      <div />
         
         <Galeria/>
+        <Footer/>
        
     </>
   );

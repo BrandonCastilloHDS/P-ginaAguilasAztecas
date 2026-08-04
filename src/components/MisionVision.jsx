@@ -1,5 +1,5 @@
 import {
-  Heart,
+  Handshake,
   ShieldCheck,
   AlertTriangle,
   UserCheck,
@@ -31,8 +31,8 @@ const cards = [
 ];
 
 const principios = [
-  { text: 'Preservación de la vida humana', icon: Heart, color: '#102a43' },
-  { text: 'Salvaguarda del material aéreo', icon: ShieldCheck, color: '#064e3b' },
+  { text: 'Preservación de la vida humana', icon: Handshake, color: '#102a43' },
+  { text: 'Salvaguarda del material aéreo', icon: ShieldCheck, color: '#102a43' },
   { text: 'Mitigación de riesgos operacionales', icon: AlertTriangle, color: '#064e3b' },
   { text: 'Responsabilidad y profesionalismo', icon: UserCheck, color: '#064e3b' },
   { text: 'Mejora continua de procedimientos', icon: TrendingUp, color: '#7f1d1d' },
@@ -41,15 +41,15 @@ const principios = [
 
 function MisionVision() {
   return (
-    <section id="mision" className="bg-[#fcfbf9] py-20 text-gray-800 font-sans">
+    <section id="mision" className="bg-[#132b49] py-20 text-gray-800 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header principal */}
         <div className="text-center mb-14">
           <p className="text-[#8c734b] text-xs font-bold tracking-[0.4em] uppercase mb-2">
-            Filosofía Operacional
+            Filosofía Operacional de Águilas Aztecas
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-[#102a43] tracking-wide mb-3">
+          <h2 className="text-4xl md:text-5xl font-black text-[#FFFFFF] tracking-wide mb-3">
             MISIÓN, VISIÓN Y OBJETIVO
           </h2>
           {/* Línea tricolor sutil */}
@@ -65,7 +65,7 @@ function MisionVision() {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="relative group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200 flex flex-col justify-between"
+              className="relative group bg-[#0b1728] rounded-lg overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200 flex flex-col justify-between"
             >
               {/* Barra de color superior */}
               <div className="h-1.5 w-full" style={{ backgroundColor: card.accentColor }} />
@@ -81,13 +81,13 @@ function MisionVision() {
                   </div>
 
                   <h3
-                    className="text-2xl font-black tracking-wider mb-3"
-                    style={{ color: card.accentColor }}
+                    className="text-2xl font-black tracking-wider mb-3 text-white"
+                    
                   >
                     {card.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm leading-relaxed font-normal relative z-10 bg-white/70 backdrop-blur-[2px] rounded p-1">
+                  <p className="text-white text-base leading-relaxed font-normal relative z-10  backdrop-blur-[2px] rounded p-1">
                     {card.text}
                   </p>
                 </div>
@@ -103,13 +103,13 @@ function MisionVision() {
         </div>
 
         {/* Marco de Actuación: Línea de tiempo de Principios */}
-        <div className="bg-[#f4f1ea] border border-[#d3c7b2] rounded-xl p-8 shadow-inner">
+        <div className="bg-[#0b1728] border border-[#d3c7b2] rounded-xl p-8 shadow-inner">
           <div className="mb-8">
             <p className="text-[#8c734b] text-[10px] font-bold tracking-[0.3em] uppercase mb-1">
               Marco de Actuación
             </p>
-            <h4 className="text-[#102a43] text-2xl font-black uppercase tracking-wider">
-              Principios Fundamentales
+            <h4 className="text-[#FFFFFF] text-2xl font-black uppercase tracking-wider">
+              Principios Fundamentales de Aguilas Aztecas
             </h4>
           </div>
 
@@ -126,21 +126,21 @@ function MisionVision() {
                     {/* Badge hexagonal / circular con icono */}
                     <div 
                       className="w-12 h-12 rounded-full bg-white border-2 flex items-center justify-center shadow-md mb-3 group-hover:scale-110 transition-transform duration-200"
-                      style={{ borderColor: p.color }}
+                      
                     >
-                      <IconComponent className="w-5 h-5" style={{ color: p.color }} />
+                      <IconComponent className="w-5 h-5 " />
                     </div>
 
                     {/* Número de secuencia */}
                     <span 
                       className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white mb-2"
                       style={{ backgroundColor: p.color }}
-                    >
+                   S >
                       0{i + 1}
                     </span>
 
                     {/* Texto del principio */}
-                    <p className="text-xs font-semibold text-gray-800 leading-tight">
+                    <p className="text-xs  text-white font-semibol leading-tight">
                       {p.text}
                     </p>
                   </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import Navegar from '../components/NavegarGaleria';
 
+
 const fotos = Array.from({ length: 13}, (_, i) => {
   const numero = i + 1;
   return {
@@ -29,7 +30,7 @@ function Galeria() {
   return (
    
   
-    <section id="galeria" className="bg-[#f4f0e8] py-24">
+    <section id="galeria" className="bg-[#0f223d] py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -37,7 +38,7 @@ function Galeria() {
           <p className="text-[#006847] text-[10px] font-bold tracking-[0.5em] uppercase mb-3">
             Medios
           </p>
-          <h2 className="text-5xl md:text-6xl font-black text-[#0b1728] mb-4 tracking-wide">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wide">
             GALERÍA
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#006847] via-[#E7E7E7] to-[#ce1126] mx-auto" />
@@ -46,7 +47,7 @@ function Galeria() {
 
         {/* Photo grid */}
         <div className="mb-6">
-          <p className="text-[#0b1728] text-xs font-black uppercase tracking-widest mb-5 flex items-center gap-3">
+          <p className="text-white text-xs font-black uppercase tracking-widest mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-[#b88a2a]" />
             Fotografías
             <span className="w-6 h-px bg-[#b88a2a]" />
@@ -110,7 +111,9 @@ function Galeria() {
         </div>
       )}
     </section>
+    
   );
+  
 }
 
 export default Galeria;
