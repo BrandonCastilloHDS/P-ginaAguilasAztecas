@@ -73,10 +73,10 @@ function Participaciones() {
   const [eventoHover, setEventoHover] = useState(null);
 
   return (
-    <section id="participaciones" className="bg-[#050B14] py-24 relative overflow-hidden font-sans">
+    <section id="participaciones" className="participaciones-section bg-[#050B14] py-24 relative overflow-hidden font-sans">
 
       {/* Gradiente radial de fondo para profundidad */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0f2038] via-[#050b14] to-[#050b14] opacity-80" />
+      <div className="participaciones-glow absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0f2038] via-[#050b14] to-[#050b14] opacity-80" />
 
       {/* Textura decorativa original */}
       <div
@@ -126,7 +126,7 @@ function Participaciones() {
                     {grupo.items.map((ev, ei) => (
                       <div
                         key={ei}
-                        className={`relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-xl p-6 shadow-xl ${
+                        className={`participacion-card relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-xl p-6 shadow-xl ${
                           gi % 2 === 0 ? 'md:text-right' : 'md:text-left'
                         }`}
                       >

@@ -58,6 +58,59 @@ body.theme-light span {
   color: inherit;
 }
 
+body.theme-light .gallery-section {
+  background-color: #e8edf0 !important;
+  color: #102033;
+}
+
+body.theme-light .gallery-section [class*="text-white"],
+body.theme-light .gallery-modal [class*="text-white"] {
+  color: #102033 !important;
+}
+
+body.theme-light .gallery-photo-overlay {
+  background-color: rgba(11, 23, 40, 0) !important;
+}
+
+body.theme-light .gallery-photo-overlay:hover,
+body.theme-light .group:hover .gallery-photo-overlay {
+  background-color: rgba(16, 32, 51, 0.42) !important;
+}
+
+body.theme-light .gallery-photo-overlay:hover p,
+body.theme-light .group:hover .gallery-photo-overlay p {
+  color: #fff !important;
+}
+
+body.theme-light .gallery-modal {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+body.theme-light .gallery-modal [class*="text-white"] {
+  color: #fff !important;
+}
+
+body.theme-light .participaciones-section {
+  background-color: #e6ebee !important;
+  color: #102033;
+}
+
+body.theme-light .participaciones-glow {
+  background:
+    radial-gradient(ellipse at center, #f2eee2 0%, #e6ebee 55%, #d8e0e4 100%) !important;
+}
+
+body.theme-light .participaciones-section [class*="text-white"],
+body.theme-light .participaciones-section [class*="text-[#f4f0e8]"] {
+  color: #102033 !important;
+}
+
+body.theme-light .participacion-card {
+  background-color: rgba(244, 240, 232, 0.72) !important;
+  border-color: rgba(16, 32, 51, 0.14) !important;
+  box-shadow: 0 16px 34px rgba(16, 32, 51, 0.12) !important;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Barlow Condensed', 'Rajdhani', system-ui, sans-serif;
 }

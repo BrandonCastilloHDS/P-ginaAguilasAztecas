@@ -30,7 +30,7 @@ function Galeria() {
   return (
    
   
-    <section id="galeria" className="bg-[#0f223d] py-24">
+    <section id="galeria" className="gallery-section bg-[#0f223d] py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -67,7 +67,7 @@ function Galeria() {
                   style={{ minHeight: i === 0 ? '320px' : '180px' }}
                 />
                 {/* Mensaje que sale en el pie de la foto  */}
-                <div className="absolute inset-0 bg-[#0b1728]/0 group-hover:bg-[#0b1728]/55 transition-all duration-300 flex items-start">
+                <div className="gallery-photo-overlay absolute inset-0 bg-[#0b1728]/0 group-hover:bg-[#0b1728]/55 transition-all duration-300 flex items-start">
                   <div className="w-full px-4 py-3 -translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <p className="text-white md:text-xl text-sm font-semibold uppercase tracking-wider">{foto.alt}</p>
                   </div>
@@ -85,7 +85,7 @@ function Galeria() {
 
       {fotoSeleccionada && (
         <div 
-          className="fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center p-4 cursor-zoom-out animate-fade-in"
+          className="gallery-modal fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center p-4 cursor-zoom-out animate-fade-in"
           onClick={() => setFotoSeleccionada(null)} // Cierra el modal si dan click en el fondo oscuro
         >
           {/* Botón de cerrar */}
