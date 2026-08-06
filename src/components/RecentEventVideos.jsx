@@ -37,15 +37,15 @@ const recentVideos = [
 
 function RecentEventVideos() {
   return (
-    <section className="bg-[#f4f0e8] py-20">
+    <section className="bg-[#132b49] py-20">
     <div className="max-w-7xl mx-auto px-6">
 
         <div className="mb-16">
-            <p className="text-[#006847] uppercase tracking-[0.35em] font-black text-xs">
+            <p className="text-[#006847] uppercase tracking-[0.35em] font-black text-base">
                 Eventos recientes
             </p>
 
-            <h2 className="text-5xl font-black mt-3 text-[#0b1728]">
+            <h2 className="text-5xl font-black mt-3 text-white">
                 VIDEOS DESTACADOS
             </h2>
         </div>
@@ -59,7 +59,7 @@ function RecentEventVideos() {
                     className={`
                         grid
                         gap-12
-                        bg-white
+                        bg-[#0b1728]
                         rounded-2xl
                         shadow-xl
                         overflow-hidden
@@ -103,7 +103,7 @@ function RecentEventVideos() {
 
                     <div>
 
-                        <h3 className="text-4xl font-black mt-5 text-[#0b1728]">
+                        <h3 className="text-4xl font-black mt-5 text-[#FFFFFF]">
                             {video.title}
                         </h3>
 
@@ -114,7 +114,7 @@ function RecentEventVideos() {
                             {video.description.map((text,index)=>(
                                 <p
                                     key={index}
-                                    className="text-gray-900 leading-8 text-lg text-justify text-center"
+                                    className="text-white leading-8 text-xl text-justify text-center"
                                 >
                                     {text}
                                 </p>

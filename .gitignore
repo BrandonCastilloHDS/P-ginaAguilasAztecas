@@ -1,8 +1,4 @@
-@"
 node_modules/
 .vite/
 dist/
 .env
-"@ | Set-Content .gitignore
-node_modules
-node_modules
