@@ -31,23 +31,20 @@ function AppContent() {
     return () => clearTimeout(hideAirplane);
   }, [location.pathname]);
 
-  if (showAirplane) {
-    return (
-      <AirplaneAnimation
-        key={location.pathname}
-        className="fixed inset-0 overflow-hidden bg-[#0b1728] pointer-events-none z-50"
-        duration={0.45}
-        onComplete={() => setHiddenAirplanePath(location.pathname)}
-      />
-    );
-  }
-
   return (
     <>
       <Navbar
         lightTheme={lightTheme}
         onToggleTheme={() => setLightTheme(theme => !theme)}
       />
+      {showAirplane && (
+        <AirplaneAnimation
+          key={location.pathname}
+          className="fixed inset-0 overflow-hidden bg-[#0b1728] pointer-events-none z-50"
+          duration={0.45}
+          onComplete={() => setHiddenAirplanePath(location.pathname)}
+        />
+      )}
       <Routes>
         <Route path="/"                element={<Home />} />
         <Route path="/historia"        element={<HistoriaPage />} />
