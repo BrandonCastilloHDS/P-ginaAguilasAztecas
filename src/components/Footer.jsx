@@ -46,6 +46,17 @@ function Footer() {
           <p className="text-white/25 text-[10px] uppercase tracking-widest whitespace-nowrap">
             SEDENA · {new Date().getFullYear()}
           </p>
+          
+          <div className="group inline-block cursor-pointer ">
+            <span className="text-white/25 text-[10px] uppercase tracking-widest whitespace-nowrap">
+            ©</span>
+            <div className="hidden group-hover:flex text-[10px]">
+              <p className='text-white/25 text-[10px] uppercase'>Brandon Castillo,</p>
+              <p className='text-white/25 text-[10px] uppercase'>Jocelyn Amador,</p>
+              <p className='text-white/25 text-[10px] uppercase'>Julio Nabor </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </footer>
