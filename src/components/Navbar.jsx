@@ -24,13 +24,37 @@ const languages = [
   { code: 'de', abbrev: 'DE', label: 'Alemán', flagClass: 'flag-de' },
 ];
 
+const getLanguageByCode = (languageCode) =>
+  languages.find(language => language.code === languageCode) || languages[0];
+
+const getLanguageFromCookie = () => {
+  const match = document.cookie.match(/(?:^|; )googtrans=\/[^/;]+\/([^;]+)/);
+
+  if (!match) {
+    return getLanguageByCode(localStorage.getItem('aguilas-language') || 'es');
+  }
+
+  const languageCode = decodeURIComponent(match[1]);
+
+  return getLanguageByCode(languageCode);
+};
+
+const setTranslateCookie = (languageCode) => {
+  document.cookie = `googtrans=/es/${languageCode}; path=/`;
+
+  const hostname = window.location.hostname;
+
+  if (hostname && hostname !== 'localhost') {
+    document.cookie = `googtrans=/es/${languageCode}; path=/; domain=${hostname}`;
+  }
+};
 
 function Navbar({ lightTheme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [translatorReady, setTranslatorReady] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
+  const [currentLanguage, setCurrentLanguage] = useState(getLanguageFromCookie);
   const location = useLocation();
 
   useEffect(() => {
@@ -40,12 +64,18 @@ function Navbar({ lightTheme, onToggleTheme }) {
   }, []);
 
   useEffect(() => {
-    if (window.google?.translate?.TranslateElement) {
-      setTranslatorReady(true);
-      return;
-    }
+    const initializeTranslateElement = () => {
+      if (!window.google?.translate?.TranslateElement) {
+        return;
+      }
 
-    window.googleTranslateElementInit = () => {
+      const container = document.getElementById('google_translate_element');
+
+      if (!container || container.querySelector('.goog-te-combo')) {
+        setTranslatorReady(true);
+        return;
+      }
+
       new window.google.translate.TranslateElement(
         {
           pageLanguage: 'es',
@@ -57,6 +87,10 @@ function Navbar({ lightTheme, onToggleTheme }) {
       setTranslatorReady(true);
     };
 
+    window.googleTranslateElementInit = initializeTranslateElement;
+
+    initializeTranslateElement();
+
     if (!document.querySelector('script[src*="translate_a/element.js"]')) {
       const script = document.createElement('script');
       script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
@@ -65,24 +99,38 @@ function Navbar({ lightTheme, onToggleTheme }) {
     }
   }, []);
 
+  useEffect(() => {
+    const savedLanguage = getLanguageFromCookie();
+
+    if (savedLanguage.code !== 'es') {
+      setTranslateCookie(savedLanguage.code);
+    }
+  }, [location.pathname, translatorReady]);
+
   const isActive = (to) =>
     to === '/' ? location.pathname === '/' : location.pathname.startsWith(to);
 
-  const translatePage = (languageCode) => {
+  const applyLanguageToGoogleSelect = (languageCode, attemptsLeft = 8) => {
     const select = document.querySelector('.goog-te-combo');
 
-    if (!select || !translatorReady) {
-      setTimeout(() => translatePage(languageCode), 500);
+    if (!select) {
+      if (attemptsLeft > 0) {
+        setTimeout(() => applyLanguageToGoogleSelect(languageCode, attemptsLeft - 1), 250);
+      }
       return;
     }
 
     select.value = languageCode;
     select.dispatchEvent(new Event('change'));
-    document.cookie = `googtrans=/es/${languageCode}; path=/`;
-    document.cookie = `googtrans=/es/${languageCode}; path=/; domain=${window.location.hostname}`;
-    setCurrentLanguage(languages.find(language => language.code === languageCode) || languages[0]);
+  };
+
+  const translatePage = (languageCode) => {
+    setTranslateCookie(languageCode);
+    localStorage.setItem('aguilas-language', languageCode);
+    setCurrentLanguage(getLanguageByCode(languageCode));
     setLanguageOpen(false);
     setMenuOpen(false);
+    applyLanguageToGoogleSelect(languageCode);
   };
 
   const selectLanguage = (event, languageCode) => {
@@ -97,7 +145,6 @@ function Navbar({ lightTheme, onToggleTheme }) {
         <button
           key={language.code}
           type="button"
-          onPointerDown={(event) => selectLanguage(event, language.code)}
           onClick={(event) => selectLanguage(event, language.code)}
           translate="no"
           className="flex w-full items-center gap-2.5 px-3 py-2 text-left text-white transition-colors hover:bg-[#d4af37]/15 hover:text-[#d4af37]"
@@ -262,7 +309,6 @@ function Navbar({ lightTheme, onToggleTheme }) {
               <button
                 key={language.code}
                 type="button"
-                onPointerDown={(event) => selectLanguage(event, language.code)}
                 onClick={(event) => selectLanguage(event, language.code)}
                 translate="no"
                 className="flex w-full items-center gap-2.5 px-4 py-2.5 text-left text-white transition-colors hover:bg-[#d4af37]/15 hover:text-[#d4af37]"
