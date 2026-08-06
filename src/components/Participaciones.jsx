@@ -69,7 +69,7 @@ const eventos = [
 ];
 
 function Participaciones() {
-  // Estado para saber qué evento se está haciendo hover
+  // Estado para mostrar un modal con una imagen referente al evento
   const [eventoHover, setEventoHover] = useState(null);
 
   return (
@@ -167,7 +167,7 @@ function Participaciones() {
         </div>
       </div>
 
-      {/* Modal Flotante (Controlado por Estado) */}
+      {/* Modal Flotante para las imágenes que se menciona anteriormente */}
       <div 
         className={`fixed inset-0 z-[100] flex items-center justify-center bg-[#050B14]/80 backdrop-blur-sm transition-all duration-300 pointer-events-none ${
           eventoHover ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -188,8 +188,8 @@ function Participaciones() {
           
           {/* Contenedor para tu Imagen */}
           <div className="w-full aspect-video bg-[#050B14] rounded-xl border border-white/10 flex items-center justify-center overflow-hidden">
-             {/* Aquí colocarás tu etiqueta <img>. Por ahora hay un placeholder. */}
-             <p className="text-white/30 text-sm tracking-widest uppercase">Área para imagen</p>
+             {/* Aquí colocarás tu etiqueta <img>.  */}
+             <p className="text-white/30 text-sm tracking-widest uppercase">Próximamente</p>
           </div>
         </div>
       </div>
