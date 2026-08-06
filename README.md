@@ -1,29 +1,6 @@
 # Águilas Aztecas 
 
-+
----
 
-## Cómo correr el proyecto
-
-```bash
-# 1. Instalar dependencias (solo la primera vez)
-npm install
-
-# 2. Levantar servidor de desarrollo
-npm run dev
-```
-
-Luego abrir en el navegador: **http://localhost:5173/**
-
-```bash
-# Generar versión final para producción
-npm run build
-
-# Previsualizar el build
-npm run preview
-```
-
----
 
 ## Estructura del proyecto
 
@@ -103,3 +80,10 @@ AguilasAztecas/
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [React Router v7](https://reactrouter.com/)
 - Fuentes: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed) + [Rajdhani](https://fonts.google.com/specimen/Rajdhani)
+
+
+---
+
+## Link de la página final 
+
+https://escuadrilla-aguilas-aztecas.famex-mex.com/
