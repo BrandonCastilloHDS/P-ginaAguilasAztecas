@@ -195,7 +195,7 @@ function HistoriaPage() {
           <div className="max-w-5xl mx-auto px-6">
             <SectionLabel style={{ '--label-color': '#006847' }}>Doctrina</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-black text-[#b88a2a]  tracking-wide mb-5">
-              FILOSOFÍA OPERACIONAL DE AGUILAS AZTECAS
+              FILOSOFÍA OPERACIONAL DE ÁGUILAS AZTECAS
             </h2>
             <div className="w-16 h-1 bg-[#b88a2a] mb-10" />
 
