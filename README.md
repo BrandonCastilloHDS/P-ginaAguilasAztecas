@@ -79,7 +79,7 @@ AguilasAztecas/
 - [Vite 8](https://vite.dev/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [React Router v7](https://reactrouter.com/)
-- Fuentes: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed) + [Rajdhani](https://fonts.google.com/specimen/Rajdhani)
+
 
 
 ---
